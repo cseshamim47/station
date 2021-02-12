@@ -1,0 +1,333 @@
+// 1
+#include <iostream>
+using namespace std;
+int main()
+{
+    int var=10;
+    int *p;
+    p = &var;
+    cout << "Address of pointer p : " << &p << endl;
+    cout << "Address of variable var : " << &var << endl;
+    cout << "Address of var using pointer p : " << p << endl;
+    cout << "Value of var : " << var << endl;
+    cout << "Value of var using pointer p : " << *p << endl;
+}
+
+// 2
+
+#include <iostream>
+using namespace std;
+int main()
+{
+//    Write a program to swap the value of two variables using pointers
+
+	int x , y, temp;
+	int *p;
+	int *p2;
+    x = 10;
+    y = 20;
+    cout << "Previous Value of X = " <<x<<endl;
+	cout << "Previous Value of Y = " <<y<<endl;
+
+    p = &x;
+    p2 = &y;
+    temp = *p;
+    *p = *p2;
+    *p2 = temp;
+    cout << "Swapped Value of X = " <<x<<endl;
+	cout << "Swapped Value of Y = " <<y<<endl;
+
+}
+
+// 3
+
+#include <iostream>
+using namespace std;
+int main()
+{
+//    Write a program to print the value of an array in forward and reverse order.
+    int arr[5]={1,2,3,4,5};
+    for(int i =0; i < 5; i++){
+            if(i==0){
+                cout <<"Forward order : " << arr[i] << "-";
+            }else if (i==4){
+                cout << arr[i] << endl ;
+            }else
+                cout << arr[i] << "-";
+    }
+    for(int i =4; i >= 0; i--){
+            if(i==4){
+                cout <<"Reverse order : " << arr[i] << "-";
+            }else if (i==0){
+                cout << arr[i] ;
+            }else
+                cout << arr[i] << "-";
+    }
+}
+
+// 4
+
+#include <iostream>
+using namespace std;
+int main()
+{
+//    Take input into an array starting from the last index
+    int arr[5];
+    for(int i=4; i>=0; i--){
+      cout << "input the value of index " << i << " :" ;
+        cin >> arr[i];
+    }
+    for(int i = 0; i<5; i++){
+        cout << "Value of index " << i << " is : " << arr[i] << endl;
+    }
+}
+
+// 5
+
+#include <iostream>
+using namespace std;
+int main()
+{
+//Write a program that find the odd numbers of an array and find the sum of the even numbers
+    int arr[6]={1,2,3,4,5};
+    int odd=0,even=0;
+    for(int i = 0; i<6; i++){
+        if(arr[i]%2!=0){
+            cout << "Index [" << i << "] = " << arr[i] << " is an odd number" << endl;
+        }else
+            even = even+arr[i];
+    }
+
+    cout << "\nSum of even numbers" << even << endl;
+
+
+}
+
+// 6
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int arr[10]={8,10,6,1,6,9,6,100,9,8};
+    int maxValue=arr[0],minValue=arr[0];
+    for(int i=0; i<10; i++){
+        if(maxValue<arr[i]){
+            maxValue = arr[i];
+        }
+    }
+    for(int i=0; i<10; i++){
+        if(minValue>arr[i]){
+            minValue = arr[i];
+        }
+    }
+    cout << "Maximum Value : " << maxValue << endl;
+    cout << "Maximum Value : " << minValue << endl;
+}
+
+// 7
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int arr[10] = {8,4,6,1,6,9,6,1,9,8};
+    int record=0;
+    cout << "arr[10] = {8,4,6,1,6,9,6,1,9,8}" << endl;
+    cout << "\nLook at the upper array and enter an array value to check \nhow many times that perticular value is repeated in the array" << endl;
+    int m;
+    cin >> m;
+    for(int i=0; i<10; i++){
+        if(arr[i]==m){
+               record++;
+            }
+    }
+    if(record>1){
+        cout << record << " times" << endl;
+    }else
+        cout << record << " time" << endl;
+}
+
+// 8
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int arr[100]={1,2,3,4,5};
+    int *arrP;
+    int m,v;
+
+    for(int i=0; i<5; i++){
+        cout << "Current value of index [" << i << "] = " << arr[i] << endl;
+    }
+
+    cout << "\n\nEnter any index number to change it's value using pointer : ";
+    cin >> m;
+    cout << "Enter any value : ";
+    cin >> v;
+    arrP = &arr[m];
+    *arrP = v;
+    cout << endl;
+    for(int i=0; i<5; i++){
+        cout << "Changed value of index [" << i << "] = " << arr[i] << endl;
+    }
+}
+
+// 9
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    string user[5] ={"kuddus","mokhles","kalachan","cena","shamim"};
+    string pass[5] ={"1234","4386","4356","1213","shamim"};
+    string *p;
+    string n,m,np,q;
+    cout << "Enter you username : ";
+    cin >> n;
+    for(int i=0; i<6; i++){
+        if(user[i]==n){
+            cout << "Enter you current password : ";
+            cin >> m;
+            if(pass[i]!=m){
+                cout << "wrong password!";
+                break;
+            }
+            else if(pass[i]==m){
+                cout << "\n\nDo you want to change your pass? (Yes/No)" << endl;
+                cin >> q;
+                if(q=="Yes" || q=="yes"){
+                cout << "Enter your new password : ";
+                cin >> np;
+                p = &np;
+                pass[i] = *p;
+                cout << "\aPassword changed!" << endl;
+                break;
+                }else{
+                    cout << "Okay fine!" << endl;
+                    break;
+                }
+            }
+        }else if(i==5){
+             cout << "wrong username!";
+        }
+    }
+    if(q=="Yes" || q=="yes"){
+    cout << "\n\nEnter you username : ";
+    cin >> n;
+    for(int i=0; i<5; i++){
+        if(user[i]==n){
+            cout << "Enter you current password : ";
+            cin >> m;
+            if(pass[i]!=m){
+                cout << "wrong password!";
+                break;
+            }
+            else if(pass[i]==m){
+                cout << "Logged in" << endl;
+                break;
+            }
+        }else if(i==5){
+             cout << "wrong username!";
+        }
+      }
+    }
+}
+
+// 10
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int arrOne[5]={10,20,30,40,50};
+    int arrTwo[8]={1,2,3,4,5,6,7,8};
+    int arrMerge[13];
+    int m = 0;
+    for(int i=0; i<13; i++){
+        if(i<5){
+            arrMerge[i]=arrOne[i];
+        }else{
+            arrMerge[i]=arrTwo[m];
+            m++;
+            }
+    }
+    cout << "Output: ";
+    for(int i=12; i>=0; i--){
+        cout << arrMerge[i] << " ";
+    }
+}
+
+// 11
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int arr[10]={8,4,6,1,6,9,6,1,9,8};
+    int freq[10] = {-1,-1,-1,-1,-1,-1,-1,-1,-1,-1};
+    int occ;
+    for(int i=0; i<10; i++){
+        occ = 1;
+        for(int j=i+1; j<10; j++){
+            if(arr[i]==arr[j]){
+                occ++;
+                freq[j] = 0;
+            }
+            if(freq[i] != 0){
+                freq[i] = occ;
+            }
+        }
+    }
+
+    for(int i=0; i<10; i++){
+            if(freq[i]==1){
+                cout << arr[i] << " occurs = " << freq[i] << " time" << endl;
+            }else if(freq[i]!=0){
+                cout << arr[i] << " occurs = " << freq[i] << " times" << endl;
+            }
+        }
+}
+
+// 12
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int arr[100];
+    int j = 0;
+    int k = 0;
+    int arrSize;
+    cout << "Input array size : ";
+    cin >> arrSize;
+    cout << "\nInput index values" << endl;
+    for(int i = 0; i<arrSize; i++){
+        cout << "Index [" << i << "] : ";
+        cin >> arr[i];
+    }
+
+    for(int i=0; i<arrSize; i++){
+        for(j=i+1; j<arrSize; j++){
+            if(arr[j]==arr[i]){
+                for(k=j; k<arrSize; k++){
+                    arr[k]=arr[k+1];
+                }
+                arrSize--;
+                j--;
+            }
+        }
+    }
+    cout << "\nArray values : ";
+    for(int i=0; i<arrSize; i++){
+        cout << arr[i] << "  ";
+    }
+
+}
+
