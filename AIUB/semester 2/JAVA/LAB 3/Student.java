@@ -6,8 +6,8 @@ class Student{
 	double cgpa;
 	int semesterNo;
 	static String universityName = "University name : AIUB";
-	Student(){}
-	Student(String n, int i, double c, int sn){
+	//Student(){}
+	Student(S 	tring n, int i, double c, int sn){
 		name = n;
 		id = i;
 		cgpa = c;
