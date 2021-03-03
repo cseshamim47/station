@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95539e57-b79f-4114-8257-6c4b2b5c4656" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../AIUB/semester 2/JAVA/LAB 3/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../AIUB/semester 2/JAVA/LAB 3/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPP/CODEFORCES/test1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPP/CODEFORCES/test1.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPP/CODEFORCES/test2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPP/CODEFORCES/test2.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloWorld/out/production/HelloWorld/Hello.class" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloWorld/out/production/HelloWorld/Hello.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloWorld/src/Hello.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloWorld/src/Hello.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../byteShortIntLong/out/production/byteShortIntLong/com/cseshamim/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../byteShortIntLong/out/production/byteShortIntLong/com/cseshamim/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../byteShortIntLong/src/com/cseshamim/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../byteShortIntLong/src/com/cseshamim/Main.java" afterDir="false" />
     </list>
@@ -51,5 +50,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
