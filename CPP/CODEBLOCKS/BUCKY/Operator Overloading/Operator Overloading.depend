@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1601719316 source:c:\users\user\desktop\e-learning\codeblocks\bucky\operator overloading\src\mojo.cpp
+	<iostream>
+	"mojo.h"
+
+1601724033 c:\users\user\desktop\e-learning\codeblocks\bucky\operator overloading\include\mojo.h
+
+1601723990 source:c:\users\user\desktop\e-learning\codeblocks\bucky\operator overloading\main.cpp
+	<iostream>
+	"mojo.h"
+

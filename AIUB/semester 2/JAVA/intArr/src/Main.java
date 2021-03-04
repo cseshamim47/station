@@ -8,7 +8,7 @@ public class Main {
         int size = sc.nextInt();
 	    int[] arr = new int[size];
 	    int sum=0;
-        System.out.print("Enter 8 integer variable : ");
+        System.out.print("Enter integer variables : ");
         for(int i = 0; i < arr.length; i++){
 	        arr[i] = sc.nextInt(); sum += arr[i];
         }

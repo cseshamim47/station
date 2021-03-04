@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1600767240 source:c:\users\nnsel\desktop\e-learning\codeblocks\bucky\raff\raff\main.cpp
+	<iostream>
+	<string>
+
