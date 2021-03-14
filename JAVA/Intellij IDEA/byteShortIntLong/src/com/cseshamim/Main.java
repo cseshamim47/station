@@ -2,17 +2,18 @@ package com.cseshamim;
 
 public class Main {
 
-
-    public static void main(String[] args) {
+    public static void main(String[] args) { // GPL - general public licence - openJDK
 
         int intMax = Integer.MAX_VALUE;  // Integer is a wrapper class
         int intMin = Integer.MIN_VALUE;  // int occupy 32 bits meaning it has a width of 32 bits or 4 byte
 
+        int tonmoyMaxedOut = Integer.MAX_VALUE;
+
         System.out.println("Int Max : "+intMax);    // intMax gets converted to String
         System.out.println("Int Min : "+intMin);
 
-        int intMaxTest = intMax + 1;
-        int intMinTest = intMin - 1;
+        int intMaxTest = intMax + 1; //
+        int intMinTest = intMin - 1; //
 
         System.out.println("Int Max Test : "+intMaxTest+" (This is called overflow)");
         System.out.println("Int Min Test : "+intMinTest+" (This is called underflow)");
@@ -40,12 +41,11 @@ public class Main {
         //long bigLongValTest = 2_14_748_3647_453; // this is an error because the value is greater than int
         long LongLiteralValueInt = 1010;    // this is accepted because the long is converted to int cz I didn't append L in the end of the value
 
-        // byte bigByteVal = 128;
+        byte bigByteVal = 127;
 
         int myTotalValue = (intMin/2);
         short shortDiv = (short) (shortMin/2);
         byte byteDiv = (byte) (byteMax/2);
-
 
 
     }

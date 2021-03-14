@@ -8,6 +8,7 @@ public class Main {
         + mb + " MB and "+remainder + " KB");
         else System.out.println("Invalid Value");
     }
+    
 
     public static void main(String[] args) {
         printMegaBytesAndKiloBytes(2500);

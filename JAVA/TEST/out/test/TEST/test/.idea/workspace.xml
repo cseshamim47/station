@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f7c8b7e9-ddec-4f9b-bf33-3af1c1c4fe7e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../AIUB/semester 2/JAVA/quizTwo/quizTwo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij IDEA/57. Coding Exercise 3 - Barking Dog/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij IDEA/57. Coding Exercise 3 - Barking Dog/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij IDEA/57. Coding Exercise 3 - Barking Dog/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij IDEA/57. Coding Exercise 3 - Barking Dog/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij IDEA/57. Coding Exercise 3 - Barking Dog/57. Coding Exercise 3 - Barking Dog.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij IDEA/57. Coding Exercise 3 - Barking Dog/src/BarkingDog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij IDEA/57. Coding Exercise 4 - Is Leap Year/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij IDEA/57. Coding Exercise 4 - Is Leap Year/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij IDEA/57. Coding Exercise 4 - Is Leap Year/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij IDEA/57. Coding Exercise 4 - Is Leap Year/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij IDEA/57. Coding Exercise 4 - Is Leap Year/57. Coding Exercise 4 - Is Leap Year.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij IDEA/57. Coding Exercise 4 - Is Leap Year/src/LeapYear.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij IDEA/57. Coding Exercise 5 - DecimalComparator/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij IDEA/57. Coding Exercise 5 - DecimalComparator/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij IDEA/57. Coding Exercise 5 - DecimalComparator/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij IDEA/57. Coding Exercise 5 - DecimalComparator/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij IDEA/57. Coding Exercise 5 - DecimalComparator/57. Coding Exercise 5 - DecimalComparator.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij IDEA/57. Coding Exercise 5 - DecimalComparator/src/DecimalComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij IDEA/57. Coding Exercise 6 - Equal Sum Checker/57. Coding Exercise 6 - Equal Sum Checker.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij IDEA/57. Coding Exercise 6 - Equal Sum Checker/src/EqualSumChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij IDEA/58. Method Overloading/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij IDEA/58. Method Overloading/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij IDEA/58. Method Overloading/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij IDEA/58. Method Overloading/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij IDEA/58. Method Overloading/58. Method Overloading.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij IDEA/58. Method Overloading/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../defaultValTest/defaultValTest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CPP/CODEBLOCKS/BUCKY/RAFF/raff/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPP/CODEBLOCKS/BUCKY/RAFF/raff/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij IDEA/57. Coding Exercise 2 - MegaBytesConverter/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Intellij IDEA/57. Coding Exercise 2 - MegaBytesConverter/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij IDEA/CharAndBoolean/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Intellij IDEA/CharAndBoolean/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij IDEA/CharAndBoolean/out/production/CharAndBoolean/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Intellij IDEA/CharAndBoolean/out/production/CharAndBoolean/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij IDEA/CharAndBoolean/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Intellij IDEA/CharAndBoolean/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij IDEA/Strings/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Intellij IDEA/Strings/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij IDEA/TernaryOperator/out/production/TernaryOperator/com/cseshamim/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Intellij IDEA/TernaryOperator/out/production/TernaryOperator/com/cseshamim/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij IDEA/TernaryOperator/src/com/cseshamim/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Intellij IDEA/TernaryOperator/src/com/cseshamim/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij IDEA/byteShortIntLong/out/production/byteShortIntLong/com/cseshamim/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Intellij IDEA/byteShortIntLong/out/production/byteShortIntLong/com/cseshamim/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij IDEA/byteShortIntLong/src/com/cseshamim/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Intellij IDEA/byteShortIntLong/src/com/cseshamim/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij IDEA/pound-KilogramConverter/src/com/cseshamim/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Intellij IDEA/pound-KilogramConverter/src/com/cseshamim/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/test/test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1pSpAIH6Sz1khQjIkhF1kMu7ZYC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
+  </component>
+  <component name="RunManager">
+    <configuration name="C" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="C" />
+      <module name="test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f7c8b7e9-ddec-4f9b-bf33-3af1c1c4fe7e" name="Default Changelist" comment="" />
+      <created>1615186201939</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615186201939</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
