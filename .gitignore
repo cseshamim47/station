@@ -2,6 +2,8 @@ out/
 .idea/
 .cph/
 .vscode/
+GeekForGeeks/*
+!*.cpp
 *.iml
 *.exe
 
