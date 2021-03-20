@@ -1,3 +1,8 @@
 out/
+.idea/
+.cph/
+.vscode/
+*.iml
+*.exe
 
 *.txt 
