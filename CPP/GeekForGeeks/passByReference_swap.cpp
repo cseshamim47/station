@@ -6,11 +6,14 @@ void swap(int &x, int &y){
     x = y;
     y = temp;
 }
-
+int myMethod(int x, int y){
+    return x;
+    return y;
+}
 int main()
 {
     int x = 10, y = 15;
     swap(x,y);
     cout << x << " " << y;
-
+    cout << endl;
 }
