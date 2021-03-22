@@ -200,7 +200,7 @@ void optionMessageSingle(){
         }
     }
 
-}
+};
 void newbankacc();
 void bankacc();
 void booth(){

@@ -55,4 +55,5 @@ public class Day_3 {
     }
 
     // initialize 3 int value and find the maximum and minimum of them using if else statement
+    // && ||
 }
