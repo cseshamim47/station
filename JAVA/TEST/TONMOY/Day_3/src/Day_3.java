@@ -3,12 +3,13 @@ public class Day_3 {
     // static : done
     // function : dekhe ashba
     // while loop : dekhe ashaba
-    // if / else
+    // if / else :
     // for loop : dekhe ashba
     // String init : done
 
     static String name = "Tonmoy";
-    static String name2 = "Tonmoy";
+    static String namen = "Tonmoy";
+    static String name2 = "SHAMIM";
     static String name3 = "Tonmoy Dey";
 
     static String name_init = new String("Tonmoy");  // explicit initialization of a string

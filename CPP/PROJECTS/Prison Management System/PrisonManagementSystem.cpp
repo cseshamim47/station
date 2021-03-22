@@ -21,6 +21,7 @@ public:
         _index++;
         cell++;
     }
+
     void setName(string name) { this->name = name; }
     string getName() { return name; }
 
@@ -472,4 +473,5 @@ void setDefaultPrisoners(){
     info[2].setAtt(30);
 
 }
+
 
