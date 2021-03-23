@@ -14,7 +14,7 @@ bool isPrime(int n){
 void primeFactor(int n){
     for(int i = 2; i<=n; i++){
         if(isPrime(i)){
-            int x = i;
+            int x = i; // 
             while(n%x==0){
                 cout << i << " ";
                 x = x*x;
@@ -26,6 +26,6 @@ void primeFactor(int n){
 
 int main()
 {
-    primeFactor(13);
+    primeFactor(12);
     
 }
