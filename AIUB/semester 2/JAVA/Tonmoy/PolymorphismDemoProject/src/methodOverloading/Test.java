@@ -25,17 +25,22 @@ public class Test {
     public static void showTask3(){
         System.out.println("************************ Task 3 ********************");
         DifferentSquenceOfParameters method = new DifferentSquenceOfParameters();
+
         method.method(111,"Rupai");
         method.method("Tamim",112);
     }
     public static void showTask4(){
         System.out.println("************************ Task 4 ********************");
+        DifferentReturnType addObj = new DifferentReturnType();
+        addObj.add();
     }
     public static void showTask5(){
         System.out.println("************************ Task 5 ********************");
     }
     public static void showTask6(){
         System.out.println("************************ Task 6 ********************");
+        DifferentSquenceOfParameters con1 = new DifferentSquenceOfParameters(111,"Rupai");
+        DifferentSquenceOfParameters con2 = new DifferentSquenceOfParameters("Tamim",112);
     }
     public static void main(String[] args) {
         mainMenu();
