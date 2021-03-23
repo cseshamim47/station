@@ -24,6 +24,9 @@ public class Test {
     }
     public static void showTask3(){
         System.out.println("************************ Task 3 ********************");
+        DifferentSquenceOfParameters method = new DifferentSquenceOfParameters();
+        method.method(111,"Rupai");
+        method.method("Tamim",112);
     }
     public static void showTask4(){
         System.out.println("************************ Task 4 ********************");
