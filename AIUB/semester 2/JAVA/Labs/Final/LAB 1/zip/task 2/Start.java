@@ -13,13 +13,17 @@ public class Start {
         Shop s2 = new Shop("On On Store","Barishal");
         s2.setCustomer(a1);
 
-        s1.showDetails();
-        System.out.println();
-        s2.showDetails();
+        System.out.println("shopName is : " + s1.getShopName());
+        System.out.println("city : " + s1.getCity());
+        System.out.println("custName is : " + s1.getCustomer().getCustName());
+        System.out.println("custNid is : " + s1.getCustomer().getCustNid());
 
-        System.out.println("-----------------");
-        System.out.println(s1.getCustomer().getCustName());
-        System.out.println(s1.getCustomer().getCustNid());
+        System.out.println();
+
+        System.out.println("shopName is : " + empty.getShopName());
+        System.out.println("city : " + empty.getCity());
+        System.out.println("custName is : " + empty.getCustomer().getCustName());
+        System.out.println("custNid is : " + empty.getCustomer().getCustNid());
 
     }
 }

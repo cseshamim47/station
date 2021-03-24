@@ -36,9 +36,4 @@ public class Shop {
         return city;
     }
 
-    public void showDetails() {
-        System.out.println("shopName is : " + shopName);
-        System.out.println("city : " + city);
-        customer.showDetails();
-    }
 }

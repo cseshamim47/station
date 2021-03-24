@@ -29,8 +29,4 @@ public class Customer {
         return custNid;
     }
 
-    public void showDetails() {
-        System.out.println("custName is : " + custName);
-        System.out.println("custNid is : " + custNid);
-    }
 }
