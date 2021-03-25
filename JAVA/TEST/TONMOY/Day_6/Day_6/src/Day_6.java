@@ -12,7 +12,8 @@ public class Day_6 {
 //
 //        primeFactor(n);
 
-//        sliceOfPizza(3);
+        sliceOfPizza(8);
+
 
     }
 
@@ -39,23 +40,23 @@ public class Day_6 {
 
 
 
-//        static void sliceOfPizza(int n){ // 3
-//                int i = 1;
-//                while(i <= n) {
-//                    int j = 1;
-//                    while(j <= n - i){ // 1 < 0
-//                        System.out.print(" ");
-//                        j++; // 2
-//                    }
+        static void sliceOfPizza(int n){ // 3
+                int i = 1;
+                while(i <= n) {
+                    int j = 1;
+                    while(j <= n - i){ // 1 < 0
+                        System.out.print(" ");
+                        j++; // 2
+                    }
 
-//                    while(j<=n){ // 2 <= 3
-//                        System.out.print("*");
-//                        j++;
-//                    }
-//                    System.out.println();
-//                    i++;
-//                }
-//        }
+                    while(j<=n){ // 2 <= 3
+                        System.out.print("*");
+                        j++;
+                    }
+                    System.out.println();
+                    i++;
+                }
+        }
 
 
 

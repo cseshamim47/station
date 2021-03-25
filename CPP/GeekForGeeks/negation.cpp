@@ -8,4 +8,5 @@ int main()
      x = 5;                // will print 2s complement which is -1-n
      cout << (~x) << endl;
      return 0;   
+     
 }
