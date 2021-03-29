@@ -36,7 +36,7 @@ public class Start {
         bookShopObj1.insertTextBook(textBookObject5);
         bookShopObj1.showAllTextBooks();
         bookShopObj1.removeTextBook(textBookObject1);
-        if(bookShopObj1.searchTextBook("200") != null) bookShopObj1.searchTextBook("200").ShowInfo();
+         bookShopObj1.searchTextBook("126").ShowInfo();
 
 
 
