@@ -2,7 +2,7 @@ public class Customer {
     static int i = 0;
     private String name;
     private String gender;
-    Account accounts[];
+    Account accounts[] = new Account[100];
     Customer(){}
     Customer(String name, String gender){
         this.name = name;
@@ -14,14 +14,15 @@ public class Customer {
     public void setGender(String gender){
         this.gender = gender;
     }
-    public void insertAccount(Account acc[]){
-        accounts = acc;
-    }
-
-//    public void insertAccount(Account acc){
-//        accounts[i] = acc;
-//        i++;
+//    public void insertAccount(Account acc[]){
+//        accounts = acc;
 //    }
+
+    public void insertAccount(Account acc){
+        accounts[i] = acc;
+        i++;
+        System.out.println("Inserted");
+    }
 
     public String getName(){ return name; }
     public String getGender(){ return  gender; }

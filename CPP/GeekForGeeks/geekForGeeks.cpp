@@ -1,22 +1,17 @@
 #include <iostream>
-#include <vector>
 using namespace std;
+
+void f(int x){
+    cout << "Integer" << endl;
+}
+void f2(int *ptr){
+    cout << "pointer" << endl;
+}
 
 int main()
 {
-    // int n;
-    // cin >> n;
-    // vector <vector <int> > vec(n, vector<int> (n,0));
-    // vector <vector <int> > transpose(n, vector<int> (n, 1));
-
-    // for(int i = 0; i < n; i++){
-    //     for(int j = 0; j < n; j++){
-    //         cout << transpose[i][j] << " ";
-    //     }
-    //     cout << endl;
-    // }
-
-    // cout << "Hellow World" << endl;
-
-    cout << 4 % 2 << endl;
+    
+    f(0);
+    f2(nullptr);
+    
 }

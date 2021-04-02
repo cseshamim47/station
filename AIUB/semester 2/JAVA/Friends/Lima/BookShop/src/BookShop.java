@@ -55,57 +55,24 @@ public class BookShop {
         }
     }
 
-//    void searchTextBook(String isbn){
-//        try {
-//            for (int i = 0; i < 100; i++) {
-//                if (isbn.equals(textBook[i].getisbn())) {
-//                    System.out.println("Search result : ");
-//                    textBook[i].ShowInfo();
-//                    break;
-//                }
-//            }
-//        }
-//        catch(NullPointerException e)   {
-//            System.out.print("No Book Found");
-//        }
-//    }
 
     TextBook searchTextBook(String isbn){
-        try {
             for (int i = 0; i < 100; i++) {
-
-                if (textBook[i].getisbn().equals(isbn)){
-                    return textBook[i];
-                }
+             if(textBook[i] != null){
+                 if (textBook[i].getisbn().equals(isbn)) {
+                     return textBook[i];
+                 }
+             }
             }
             return null;
-        }
-        catch(NullPointerException e)   {
-            System.out.print("No Book Found");
-            return null;
-        }
     }
 
-//    void searchStoryBook(String isbn){
-//        try {
-//            for (int i = 0; i < 100; i++) {
-//                if (isbn.equals(storyBook[i].getisbn())) {
-//                    System.out.println("Search result : ");
-//                    storyBook[i].ShowInfo();
-//                    break;
-//                }
-//            }
-//        }
-//        catch(NullPointerException e)   {
-//            System.out.print("No Book Found");
-//        }
-//    }
 
     StoryBook searchStoryBook(String isbn){
         try {
             for (int i = 0; i < 100; i++) {
 
-                if (storyBook[i].getisbn().equals(isbn)){
+                if (storyBook[i]!=null && storyBook[i].getisbn().equals(isbn)){
                     return storyBook[i];
                 }
             }
