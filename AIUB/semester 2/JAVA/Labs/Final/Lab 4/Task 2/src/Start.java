@@ -23,34 +23,19 @@ public class Start {
         System.out.println("Nid : "+ customerObj.getNid());
         System.out.println("Name : "+ customerObj.getName());
         customerObj.addFixedAccount(fixedAccoutObj1);
-        customerObj.addSavingsAccount(savingsAccountObj1);
-        customerObj.showAllSavingAccounts();
-        customerObj.showAllFixedAccounts();
-        System.out.println();
-
-        customerObj.setNid(2222);
-        customerObj.setName("Shahruk Khan");
-        System.out.println("Nid : "+ customerObj.getNid());
-        System.out.println("Name : "+ customerObj.getName());
         customerObj.addFixedAccount(fixedAccoutObj2);
-        customerObj.addSavingsAccount(savingsAccountObj2);
-        customerObj.removeFixedAccount(fixedAccoutObj2);
-        customerObj.showAllFixedAccounts();
-        System.out.println();
-
-        customerObj.setNid(3333);
-        customerObj.setName("Sakib Khan");
         customerObj.addFixedAccount(fixedAccoutObj3);
+        customerObj.addFixedAccount(fixedAccoutObj4);
+        customerObj.addSavingsAccount(savingsAccountObj1);
+        customerObj.addSavingsAccount(savingsAccountObj2);
         customerObj.addSavingsAccount(savingsAccountObj3);
+        customerObj.addSavingsAccount(savingsAccountObj4);
+        customerObj.removeFixedAccount(fixedAccoutObj2);
         customerObj.removeSavingsAccout(savingsAccountObj3);
         customerObj.showAllSavingAccounts();
+        customerObj.showAllFixedAccounts();
         System.out.println();
 
-        customerObj.setNid(4444);
-        customerObj.setName("Rumi Khan");
-        customerObj.addFixedAccount(fixedAccoutObj3);
-        customerObj.addSavingsAccount(savingsAccountObj3);
-        System.out.println();
 
     }
 }
