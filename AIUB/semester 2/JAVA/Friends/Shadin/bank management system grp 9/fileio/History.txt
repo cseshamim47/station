@@ -1,0 +1,10 @@
+Deposit: $1000.0 in Account Number 50 by 123
+Withdraw: $50.0 in Account Number 50 by 123
+Deposit: $1000.0 in Account Number 50 by 123
+Deposit: $1000.0 in Account Number 50 by 123
+Withdraw: $50.0 in Account Number 50 by 123
+Deposit: $780.0 in Account Number 80 by 456
+Withdraw: $560.0 in Account Number 80 by 456
+Deposit: $1.2345678E7 in Account Number 12 by 67
+Withdraw: $1234567.0 in Account Number 12 by 67
+Deposit: $1500.0 in Account Number 123 by 123

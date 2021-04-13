@@ -1,0 +1,17 @@
+Add Studentlist:
+Student name: nirjhor
+id:321
+status:Regular
+graduation statusfalse
+
+Add Studentlist:
+Student name: shamim
+id:123
+status:Regular
+graduation statusfalse
+
+Add Studentlist:
+Student name: shadin
+id:421
+status:Regular
+graduation statusfalse
