@@ -50,18 +50,37 @@ public class Admin extends User
         }
         return false;
     }
+
     public boolean emailValidation(String mail){
         for(int i = 0; i < users.length; i++){
             if(users[i] != null && users[i].getMailAddress().equals(mail)) return true;
         }
         return false;
     }
-
+    public void searchUser(String username){
+        for(int i = 0; i < users.length; i++){
+            if(users[i] != null && users[i].getUsername().equals(username)){
+                System.out.println();
+                System.out.println("User stored at index " + i);
+                System.out.println("Full Name : "+ users[i].getFullName());
+                System.out.println("Username : "+ users[i].getUsername());
+                System.out.println("Email : "+ users[i].getMailAddress());
+                System.out.println("Mobile : "+ users[i].getMobile());
+                System.out.println("Password : "+ users[i].getPassword());
+            }
+        }
+    }
     public String getMasterKey(){ return masterKey; }
 
     public boolean adminUsernameValidation(String username){
         for(int i = 0; i < admins.length; i++){
             if(admins[i] != null && admins[i].getUsername().equals(username)) return true;
+        }
+        return false;
+    }
+    public boolean adminPasswordValidation(String username){
+        for(int i = 0; i < admins.length; i++){
+            if(admins[i] != null && admins[i].getPassword().equals(username)) return true;
         }
         return false;
     }

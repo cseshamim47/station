@@ -40,8 +40,9 @@ public class test {
 //        int optionInt = option;
 //        System.out.println((int)option);
 
-        New.test();
-
+//        New.test();
+        String password = PasswordField.readPassword("Enter password: ");
+        System.out.println("The password entered is: "+password);
     }
 
     public static void pause(){
