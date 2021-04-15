@@ -102,11 +102,17 @@ public class UserLogin {
                         Utility.pause();
                         break;
                     }
-                    else System.out.println("                                                              User Not found!!");
+                    else{
+                        System.out.println("                                                              User Not found!!");
+                        Utility.pause();
+                        break;
+                    }
                 }
                 continue;
             }
             if(option.equals("4")){
+                System.out.print("\n                                                              Successfully Logged Out!!! ");
+                Utility.pause();
                 break;
             }
         }
@@ -186,7 +192,8 @@ public class UserLogin {
                 break;
             }
             if(option.equals("3")){
-//                Utility.mainMenu();
+                System.out.print("\n                                                              Successfully Logged Out!!! ");
+                Utility.pause();
                 break;
             }
         }

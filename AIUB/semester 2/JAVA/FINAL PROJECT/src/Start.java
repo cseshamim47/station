@@ -106,6 +106,15 @@ public class Start
                     // registration end
                 }
 
+            }else if(option.equals("2")){
+                System.out.println("\n                                        --------------------------------UNDER CONSTRUCTION--------------------------------");
+                Utility.pause();
+            }else if(option.equals("3")){
+                System.out.println("\n                                        --------------------------------UNDER CONSTRUCTION--------------------------------");
+                Utility.pause();
+            }else if(option.equals("4")){
+                System.out.println("\n                                        --------------------------------UNDER CONSTRUCTION--------------------------------");
+                Utility.pause();
             }
         }
 
