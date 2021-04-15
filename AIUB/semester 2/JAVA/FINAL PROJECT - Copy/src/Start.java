@@ -17,40 +17,11 @@ public class Start
         Admin adminRevoke = new Admin();
         User[] usersObject = new User[100];
 
-        /////////////////////////////////////////////////////////////
-
-        User[] demoUser = new User[2];
-        demoUser[0] = new User();
-        demoUser[0].setFullName("Md Shamim Ahmed");
-        demoUser[0].setUsername("cseshamim");
-        demoUser[0].setMailAddress("shamim@mail.com");
-        demoUser[0].setMobile("01878042329");
-        demoUser[0].setPassword("123");
-
-        demoUser[1] = new User();
-        demoUser[1].setFullName("Ahmed Shanto");
-        demoUser[1].setUsername("shanto");
-        demoUser[1].setMailAddress("shamim@mail.com");
-        demoUser[1].setMobile("01878042329");
-        demoUser[1].setPassword("123");
-
-        adminRevoke.insertUser(demoUser[0]);
-        adminRevoke.insertUser(demoUser[1]);
-
-        Admin[] demoAdmin = new Admin[1];
-        demoAdmin[0] = new Admin();
-        demoAdmin[0].setUsername("admin");
-        demoAdmin[0].setPassword("admin");
-
-        adminRevoke.insertAdmin(demoAdmin[0]);
-        /////////////////////////////////////////////////////////////
-
-
         for(;;){
             Utility.cls();
             Utility.mainMenu();
             String option = input.nextLine();
-            if(option.equals("0")) break;
+
             if(option.equals("1")){
                 Utility.cls();
                 for(;;){
@@ -89,6 +60,10 @@ public class Start
                             Utility.registrationMenu();
                             option = input.nextLine();
                             if (option.equals("3")) {
+                                adminRevoke.showAlladmin();
+                                System.out.println("----------");
+                                adminRevoke.showAllUser();
+                                Utility.pause();
                                 break;
                             }
                             if (option.equals("2")) {
@@ -108,10 +83,6 @@ public class Start
 
             }
         }
-
-
-
-        ////////////////////////////////////////////////////////////////////////////////////
 
 
 

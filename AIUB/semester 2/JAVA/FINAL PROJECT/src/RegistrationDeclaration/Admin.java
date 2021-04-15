@@ -26,22 +26,24 @@ public class Admin extends User
 
     public void showAllUser(){
         int countUser = 0;
-        System.out.println("-----------------------------------------------------------------");
-        System.out.println("|                      ALL USERS INFORMATION                    | ");
-        System.out.println("-----------------------------------------------------------------");
+        System.out.println();
+        System.out.println("                                                    -----------------------------------------------------------------");
+        System.out.println("                                                   |                       ALL USERS INFORMATION                     | ");
+        System.out.println("                                                    -----------------------------------------------------------------");
+        System.out.println();
         for(int i = 0; i < users.length; i++){
             if(users[i] != null){
                 countUser++;
                 System.out.println();
-                System.out.println("User " + countUser + " : ");
-                System.out.println("Full Name : "+ users[i].getFullName());
-                System.out.println("Username : "+ users[i].getUsername());
-                System.out.println("Email : "+ users[i].getMailAddress());
-                System.out.println("Mobile : "+ users[i].getMobile());
-                System.out.println("Password : "+ users[i].getPassword());
+                System.out.println("                                                              User " + countUser + " : ");
+                System.out.println("                                                              Full Name : "+ users[i].getFullName());
+                System.out.println("                                                              Username : "+ users[i].getUsername());
+                System.out.println("                                                              Email : "+ users[i].getMailAddress());
+                System.out.println("                                                              Mobile : "+ users[i].getMobile());
+                System.out.println("                                                              Password : "+ users[i].getPassword());
             }
         }
-        if(countUser == 0) System.out.println("No user found in the record!!");
+        if(countUser == 0) System.out.println("                                                              No user found in the record!!");
     }
 
     public boolean usernameValidation(String username){
@@ -61,12 +63,18 @@ public class Admin extends User
         for(int i = 0; i < users.length; i++){
             if(users[i] != null && users[i].getUsername().equals(username)){
                 System.out.println();
-                System.out.println("User stored at index " + i);
-                System.out.println("Full Name : "+ users[i].getFullName());
-                System.out.println("Username : "+ users[i].getUsername());
-                System.out.println("Email : "+ users[i].getMailAddress());
-                System.out.println("Mobile : "+ users[i].getMobile());
-                System.out.println("Password : "+ users[i].getPassword());
+                System.out.println("                                                    -----------------------------------------------------------------");
+                System.out.println("                                                   |                         SINGLE USER INFO                       | ");
+                System.out.println("                                                    -----------------------------------------------------------------");
+                System.out.println();
+
+                System.out.println();
+                System.out.println("                                                              User stored at index " + i);
+                System.out.println("                                                              Full Name : "+ users[i].getFullName());
+                System.out.println("                                                              Username : "+ users[i].getUsername());
+                System.out.println("                                                              Email : "+ users[i].getMailAddress());
+                System.out.println("                                                              Mobile : "+ users[i].getMobile());
+                System.out.println("                                                              Password : "+ users[i].getPassword());
             }
         }
     }
@@ -102,18 +110,20 @@ public class Admin extends User
 
     public void showAlladmin(){
         int countUser = 0;
-        System.out.println("-----------------------------------------------------------------");
-        System.out.println("|                      ALL ADMIN INFORMATION                    | ");
-        System.out.println("-----------------------------------------------------------------");
+        System.out.println();
+        System.out.println("                                                    -----------------------------------------------------------------");
+        System.out.println("                                                   |                       ALL ADMIN INFORMATION                     | ");
+        System.out.println("                                                    -----------------------------------------------------------------");
+        System.out.println();
         for(int i = 0; i < admins.length; i++){
             if(admins[i] != null){
                 countUser++;
                 System.out.println();
-                System.out.println("User " + countUser + " : ");
-                System.out.println("Username : "+ admins[i].getUsername());
-                System.out.println("Password : "+ admins[i].getPassword());
+                System.out.println("                                                              User " + countUser + " : ");
+                System.out.println("                                                              Username : "+ admins[i].getUsername());
+                System.out.println("                                                              Password : "+ admins[i].getPassword());
             }
         }
-        if(countUser == 0) System.out.println("No admin found in the record!!");
+        if(countUser == 0) System.out.println("                                                              No admin found in the record!!");
     }
 }
