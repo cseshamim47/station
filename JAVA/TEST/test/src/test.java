@@ -23,9 +23,9 @@ public class test {
 
     }
 
-    public static void main(String[] args) {
-//        fileSystem();
+    public static void main(String[] args){
 
+//        fileSystem();
 //        Scanner sc = new Scanner(System.in);
 //        String str = sc.nextLine();
 //        try{
@@ -39,10 +39,8 @@ public class test {
 //        char option = 'a';
 //        int optionInt = option;
 //        System.out.println((int)option);
-
 //        New.test();
-        String password = PasswordField.readPassword("Enter password: ");
-        System.out.println("The password entered is: "+password);
+
     }
 
     public static void pause(){
