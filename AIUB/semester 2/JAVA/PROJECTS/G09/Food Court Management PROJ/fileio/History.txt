@@ -1,0 +1,8 @@
+Added: 56 Unit/Units
+Food ID: 1
+ Restaurant: 12
+
+Sold: 4 Unit/Units
+Food ID: 1
+Restaurant: 12
+

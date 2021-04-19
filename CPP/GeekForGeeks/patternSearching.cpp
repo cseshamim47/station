@@ -8,6 +8,7 @@ void printIndex(string text , string pat){
 
         found = text.find(pat, found+1);
     }
+    cout << found << endl;
 }
 
 

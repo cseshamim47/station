@@ -1,8 +1,5 @@
-#include <iostream>
-using namespace std;
-
-int main()
-{
-    cout << endl;
-    
-}
+if(ans % 10 != 0){
+    //     y = ans;
+    //     ans = 0;
+    //     goto shamim;
+    // } 

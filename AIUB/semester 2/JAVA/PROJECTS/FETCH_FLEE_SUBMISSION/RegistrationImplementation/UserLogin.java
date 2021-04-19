@@ -1,9 +1,7 @@
 package RegistrationImplementation;
 
-import RegistrationDeclaration.*;
 import Essentials.*;
-
-
+import RegistrationDeclaration.*;
 import java.io.Console;
 import java.util.Scanner;
 

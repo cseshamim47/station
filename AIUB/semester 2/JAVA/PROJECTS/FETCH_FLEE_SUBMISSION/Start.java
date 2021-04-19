@@ -1,6 +1,9 @@
+import Buy_A_Ticket.BuyATicket;
 import Essentials.Utility;
+
 import RegistrationDeclaration.*;
 import RegistrationImplementation.*;
+
 
 import java.util.Scanner;
 
@@ -22,17 +25,17 @@ public class Start
         User[] demoUser = new User[2];
         demoUser[0] = new User();
         demoUser[0].setFullName("Md Shamim Ahmed");
-        demoUser[0].setUsername("cseshamim");
-        demoUser[0].setMailAddress("shamim@mail.com");
+        demoUser[0].setUsername("cseshamim47");
+        demoUser[0].setMailAddress("cseshamim47@gmail.com");
         demoUser[0].setMobile("01878042329");
         demoUser[0].setPassword("123");
 
         demoUser[1] = new User();
-        demoUser[1].setFullName("Ahmed Shanto");
-        demoUser[1].setUsername("shanto");
-        demoUser[1].setMailAddress("shamim@mail.com");
-        demoUser[1].setMobile("01878042329");
-        demoUser[1].setPassword("123");
+        demoUser[1].setFullName("Sudipta Kumar Das");
+        demoUser[1].setUsername("yaarian");
+        demoUser[1].setMailAddress("dip.kumar020@gmail.com");
+        demoUser[1].setMobile("01931117419");
+        demoUser[1].setPassword("yaarian");
 
         adminRevoke.insertUser(demoUser[0]);
         adminRevoke.insertUser(demoUser[1]);
@@ -107,39 +110,22 @@ public class Start
                 }
 
             }else if(option.equals("2")){
-                System.out.println("\n                                        --------------------------------UNDER CONSTRUCTION--------------------------------");
+                BuyATicket bat = new BuyATicket();
+                bat.userBuyATicket();
                 Utility.pause();
             }else if(option.equals("3")){
-                System.out.println("\n                                        --------------------------------UNDER CONSTRUCTION--------------------------------");
-                Utility.pause();
-            }else if(option.equals("4")){
-                System.out.println("\n                                        --------------------------------UNDER CONSTRUCTION--------------------------------");
+
+                Utility.cls();
+                Utility.aboutUs();
+                System.out.println("\n                                                           -------------------------------------------------------");
+                Utility.typeWriteSingleTime("",                                                                    "SIFAT RAHMAN AHONA");
+                System.out.println("\n                                                           -------------------------------------------------------");
+                System.out.println("\n");
                 Utility.pause();
             }
         }
 
-
-
-        ////////////////////////////////////////////////////////////////////////////////////
-
-
-
-//        usersObject[0] = new User();
-//        RegistrationImplementation.UserRegistration.userRegistration(usersObject[0],adminRevoke);
-//        usersObject[1] = new User();
-////        RegistrationImplementation.UserRegistration.userRegistration(usersObject[1],adminRevoke);
-//
-//
-//        adminObject[0] = new Admin();
-//        RegistrationImplementation.UserRegistration.adminRegistration(adminObject[0],adminRevoke);
-////        adminObject[1] = new Admin();
-////        RegistrationImplementation.UserRegistration.adminRegistration(adminObject[1],adminRevoke);
-////        adminRevoke.showAlladmin();
-//
-//        UserLogin.adminLogin(adminRevoke);
-//        UserLogin.adminInterface(adminRevoke);
-//        UserLogin.userLogin(adminRevoke);
-//        UserLogin.userInterface(adminRevoke);
+        ////////////////////////////////////// THE END //////////////////////////////////////////////
 
     }
 }

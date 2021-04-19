@@ -15,10 +15,25 @@ public class Utility {
         System.out.print("\n                                                              Press any key to continue >>>> ");
         scanner.nextLine();
     }
+    public static void typeWrite(String text1,String text2)
+    {
+        cls();
+        int i, j;
+        for (j = 0; j < 3; j++) {
+            System.out.print("\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t"+text1); //// System.out.print("\n\n\n\n\t\t\t"+text1);
+            for (i = 0; i < text2.length(); i++) {
+                System.out.print(text2.charAt(i));
+                try {
+                    Thread.sleep(100);//0.5s pause between characters
+                } catch (InterruptedException ex) { Thread.currentThread().interrupt(); }
+            }
+            cls();
+        }
+    }
 
     public static void greeting(){
         System.out.println("                                                    -----------------------------------------------------------------");
-        System.out.println("                                                   |            W E L C O M E   T O   F L E T C H _ F L E E          | ");
+        System.out.println("                                                   |             W E L C O M E   T O   F E T C H _ F L E E          | ");
         System.out.println("                                                    -----------------------------------------------------------------");
     }
 
@@ -27,8 +42,7 @@ public class Utility {
         greeting();
         System.out.println("                                                                          1. Login / Registration");
         System.out.println("                                                                          2. Buy a Ticket");
-        System.out.println("                                                                          3. Verify a ticket");
-        System.out.println("                                                                          4. About us");
+        System.out.println("                                                                          3. About Us");
         System.out.print("\n                                                              Choose Your Option ( '0' to exit ) ---------> ");
     }
 
@@ -90,5 +104,43 @@ public class Utility {
         System.out.println("                                                                          3. Logout");
         System.out.print("\n                                                              Choose Your Option ---------> ");
     }
+
+
+
+    public static void aboutUs(){
+        System.out.println("                                                    ----------------------------------------------------------------------");
+        System.out.println("                                                   |                             ABOUT FETCH_FLEE                         | ");
+        System.out.println("                                                    ----------------------------------------------------------------------");
+
+        System.out.println("                                                                               Version : 1.0    \n\n");
+        System.out.println("                                                           ----------------  D E V E L O P E R S  ---------------- \n");
+
+        System.out.println("                                                                              Kashfia Azad Tuba");
+        System.out.println("                                                                              MD Shamim Ahmed");
+        System.out.println("                                                                              Samir Hasan");
+        System.out.println("                                                                              Sudipta Kumar Das");
+        System.out.println("\n                                                           -------------  I N S T R U C T E D   B Y  -------------  \n");
+
+
+    }
+    public static void typeWriteSingleTime(String text1,String text2)
+    {
+
+        int i;
+            System.out.print("                                                                             "+text1);// 80 Spaces for middle
+            for (i = 0; i < text2.length(); i++) {
+                System.out.print(text2.charAt(i));
+                try {
+                    Thread.sleep(100);//0.5s pause between characters
+                } catch (InterruptedException ex) { Thread.currentThread().interrupt(); }
+            }
+
+
+    }
+
+
+
+
+
 
 }
