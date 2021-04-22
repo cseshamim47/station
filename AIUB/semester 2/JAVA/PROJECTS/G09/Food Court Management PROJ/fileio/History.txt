@@ -6,3 +6,19 @@ Sold: 4 Unit/Units
 Food ID: 1
 Restaurant: 12
 
+Added: 100 Unit/Units
+Food ID: 1
+ Restaurant: 1
+
+Sold: 110 Unit/Units
+Food ID: 1
+Restaurant: 1
+
+Added: 505 Unit/Units
+Food ID: Biriyani
+ Restaurant: 1
+
+Sold: 100 Unit/Units
+Food ID: Biriyani
+Restaurant: 1
+

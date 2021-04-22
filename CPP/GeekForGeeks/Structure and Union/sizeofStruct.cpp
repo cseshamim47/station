@@ -6,19 +6,19 @@ struct S1{
     char c1; //  1 + 7
     double d1; // 8
     char c2; // 1 + 7
-}__attribute__((packed));
-
-struct S2{
+};
+struct S2
+{
     char c1; // 1
     char c2; // 1 + 6
     double d1; // 8
-}__attribute__((packed));
-
-struct S3{
+};
+struct S3
+{
     double d1; // 8 
     char c1; // 1
     char c2; // 1 + 6
-}__attribute__((packed));
+};
 
 
 int main()

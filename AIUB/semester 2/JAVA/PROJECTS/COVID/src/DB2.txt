@@ -1,0 +1,11 @@
+sl0001a,n,1
+sl0002a,n,1
+sl0003a,n,1
+sl0004a,p,0
+sl0005a,p,0
+sl0004a,p,0
+sl0003a,n,1
+sl0001a,n,1
+sl0004a,n,1
+sl0001a,n,1
+sl0006a,n,1

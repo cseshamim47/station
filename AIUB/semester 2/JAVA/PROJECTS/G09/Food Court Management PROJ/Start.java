@@ -58,7 +58,8 @@ public class Start
 							System.out.print("Enter Employee ID: ");
 							String empins = sc.next();
 							System.out.print("Enter Employee Name: ");
-							String nameins = sc.next();
+							sc.nextLine();
+							String nameins = sc.nextLine();
 							System.out.print("Enter Employee Salary: "); 									
 							double salaryins = sc.nextDouble();
 							

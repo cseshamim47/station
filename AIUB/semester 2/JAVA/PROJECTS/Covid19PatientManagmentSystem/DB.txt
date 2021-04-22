@@ -1,0 +1,7 @@
+sl0001a,p,1,O+,Akash,12/12/2020,20,Student,Banasree,01787336084
+sl0002a,p,1,A+,Shartaz,12/23/2020,34,adasd,asdad,23123213
+sl0003a,p,1,A+,Shartaz,12/23/2020,34,adasd,asdad,23123213
+sl0004a,p,1,A+,Shartaz,12/23/2020,34,adasd,asdad,23123213
+sl0005a,p,1,A+,Shartaz,12/23/2020,34,adasd,asdad,23123213
+sl0003a,n,0,O-,asdsad,312321,32,adad,bcvbcv,12321321
+sl0006a,p,1,A+,Jamil,23/10/2020,21,Student,Mirpur,01234567890

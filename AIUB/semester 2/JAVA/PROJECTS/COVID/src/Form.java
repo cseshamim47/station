@@ -1,0 +1,6 @@
+interface Form {
+	
+	void form();
+	
+}
+
