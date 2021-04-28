@@ -1,0 +1,8 @@
+Student of ID:Demo1 Added 12 credits.
+Student of ID:12 Added 12 credits.
+Student of ID:12 Dropped 4 credits.
+
+Student of ID:20442423 Added 123 credits.
+Student of ID:1 Added 1000 credits.
+Student of ID:1 Added 10 credits.
+Student of ID:1 Dropped 6 credits.

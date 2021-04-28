@@ -100,8 +100,7 @@ public class Utility {
         System.out.println("                                                   |                             USER PORTAL                         | ");
         System.out.println("                                                    -----------------------------------------------------------------");
         System.out.println("                                                                          1. Profile");
-        System.out.println("                                                                          2. Ticket Purchased");
-        System.out.println("                                                                          3. Logout");
+        System.out.println("                                                                          2. Logout");
         System.out.print("\n                                                              Choose Your Option ---------> ");
     }
 

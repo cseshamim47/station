@@ -1,21 +1,13 @@
-import java.util.Scanner;
+
 
 public class test {
 
     public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
-        String str1 = scanner.nextLine();
-        String a[] = str1.split(" ");
-        String str2 = scanner.next();
-        int n = a.length;
-        int found = 0;
-        for(int i = 0; i < n; i++){
-            if(pat(a[i]) == pat(str2)){
-                System.out.println(a[i]);
-            }
-        }
 
-
+        abstraction objRef = new child();
+        objRef.myMethod();
+        System.out.println(objRef.x);
+        
     }
 }
 

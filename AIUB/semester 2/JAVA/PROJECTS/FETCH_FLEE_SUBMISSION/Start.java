@@ -22,7 +22,7 @@ public class Start
 
         /////////////////////////////////////////////////////////////
 
-        User[] demoUser = new User[2];
+        User[] demoUser = new User[10];
         demoUser[0] = new User();
         demoUser[0].setFullName("Md Shamim Ahmed");
         demoUser[0].setUsername("cseshamim47");
@@ -37,8 +37,16 @@ public class Start
         demoUser[1].setMobile("01931117419");
         demoUser[1].setPassword("yaarian");
 
+		demoUser[2] = new User();
+        demoUser[2].setFullName("Kashfia Azad Tuba");
+        demoUser[2].setUsername("tuba");
+        demoUser[2].setMailAddress("kashfia12.azad@gmail.com");
+        demoUser[2].setMobile("01627765515");
+        demoUser[2].setPassword("tuba");
+
         adminRevoke.insertUser(demoUser[0]);
         adminRevoke.insertUser(demoUser[1]);
+		adminRevoke.insertUser(demoUser[2]);
 
         Admin[] demoAdmin = new Admin[1];
         demoAdmin[0] = new Admin();

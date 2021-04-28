@@ -1,0 +1,24 @@
+
+Add Studentlist:
+Student name: shamim
+id:1
+status:Probation
+graduation statusfalse
+Add Studentlist:
+Student name: shamim
+id:1
+status:Regular
+graduation statusfalse
+Add Studentlist:
+Student name: shamim
+id:1
+status:Regular
+graduation statusfalse
+Remove Studentlist:
+Student name: null
+Student id:null
+Add Studentlist:
+Student name: shamim
+id:1
+status:Regular
+graduation statusfalse
