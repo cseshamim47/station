@@ -5,7 +5,7 @@ typedef struct Point
 {
     int x;
     int y;
-}P;
+}P; // P is an alias of Point
 
 int main()
 {

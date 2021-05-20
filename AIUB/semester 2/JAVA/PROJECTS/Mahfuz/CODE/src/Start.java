@@ -10,5 +10,4 @@ public class Start {
 		ob.Payment();
 		ob.reciept();
 	}
-
 }

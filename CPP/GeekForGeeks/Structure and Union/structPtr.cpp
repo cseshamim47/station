@@ -9,10 +9,11 @@ struct Point{
 int main()
 {
     Point p = {10, 20};
-    Point *ptr = &p;
+    Point *ptr;
+    ptr = &p;
     cout << ptr->x << ' ';
     ptr->x = 30;
-    cout << p.x << endl;
-    
-    
+    cout << p.x << endl;  
+    (*ptr).y = 40;
+    cout << p.y << endl;   
 }

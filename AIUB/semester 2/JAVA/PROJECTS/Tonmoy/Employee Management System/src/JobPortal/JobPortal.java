@@ -3,7 +3,7 @@ package JobPortal;
 import Essentials.Utility;
 import RegistrationDeclaration.Admin;
 import RegistrationDeclaration.User;
-import RegistrationImplementation.UserLogin;
+import RegistrationImplementation.*;
 
 import java.util.Scanner;
 
