@@ -11,7 +11,6 @@ void printIndex(string text , string pat){
     cout << found << endl;
 }
 
-
 int main()
 {
     string text, pat;
