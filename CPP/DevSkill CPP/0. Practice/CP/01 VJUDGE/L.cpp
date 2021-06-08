@@ -3,13 +3,12 @@ using namespace std;
 
 int main()
 {
-    #ifndef ONLINE_JUDGE  
-        freopen("input.txt","r",stdin);
-    #endif
+    // #ifndef ONLINE_JUDGE  
+    //     freopen("input.txt","r",stdin);
+    // #endif
     string str,temp;
     while(getline(cin,str)){
     queue<string>digits,opperand;
-    // getline(cin,str);
     str.append(" ");
     int i = 0;
     char ch;
@@ -52,7 +51,6 @@ int main()
             tempQ.pop();
         }else{
             a = 0;
-            // cout << tempQ.front() << endl;
             a = stod(tempQ.front()); 
             tempQ.pop();
         }
@@ -65,16 +63,3 @@ int main()
     answer = 0;
     }
 }
-
-
-//        Sample Input
-//        123 1254 + 1.254 * 45.87 /
-//        5 4 +
-//        5 4 + 1 + 2 + 12 -
-//        3 2 * 1 - 2 / 3.1415 +
-
-//        Sample Output
-//        37.6446
-//        9.0000
-//        0.0000
-//        5.6415

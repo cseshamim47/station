@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void printIndex(string text , string pat){
+void printIndex(string pat , string text){
     int found = text.find(pat);
     while(found != string::npos){
         cout << "Pattern found at index : " << found << endl;
@@ -14,8 +14,8 @@ void printIndex(string text , string pat){
 int main()
 {
     string text, pat;
-    cin >> text >> pat;
+    cin >> pat >> text;
 
-    printIndex(text,pat);
+    printIndex(pat,text);
     
 }
