@@ -10,7 +10,10 @@ struct S1{
 struct S2
 {
     char c1; // 1
-    char c2; // 1 + 6
+    char c2; // 1 
+    char c3; // 1 
+    char c4; // 1 
+    int x; // 4
     double d1; // 8
 };
 struct S3

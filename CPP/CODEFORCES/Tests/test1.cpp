@@ -1,46 +1,21 @@
-// C++ program to implement division with large
-// number
 #include <bits/stdc++.h>
 using namespace std;
 
-// A function to perform division of large numbers
-string longDivision(string number, int divisor)
-{
-	// As result can be very large store it in string
-	string ans;
+int main(){
+    int  count, i;
+     cin >> count;
+  int  input[count], output[count];
+    for(i = 0; i < count; i++){
+        cin >> input[i];
+    }
 
-	// Find prefix of number that is larger
-	// than divisor.
-	int idx = 0;
-	int temp = number[idx] - '0';
-	while (temp < divisor)
-		temp = temp * 10 + (number[++idx] - '0');
+    for(i = 0; i < count; i++){
+        output[i] = input[count-i-1];
 
-	// Repeatedly divide divisor with temp. After
-	// every division, update temp to include one
-	// more digit.
-	while (number.size() > idx) {
-		// Store result in answer i.e. temp / divisor
-		ans += (temp / divisor) + '0';
-
-		// Take next digit of number
-		temp = (temp % divisor) * 10 + number[++idx] - '0';
-	}
-
-	// If divisor is greater than number
-	if (ans.length() == 0)
-		return "0";
-
-	// else return ans
-	return ans;
-}
-
-// Driver program to test longDivison()
-int main()
-{
-    // system("cls");
-	string number = "8967506";
-	int divisor = 679;
-	cout << longDivision(number, divisor);
-	return 0;
+    }
+    for(i = 0; i < count; i++){
+        if(i != count-1) cout << output[i] <<" ";
+        else cout << output[i];
+    }
+    return 0;
 }
