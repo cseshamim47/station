@@ -7,19 +7,15 @@ bool isBalanced(string bracetSeq){
     for(int i = 0; i < bracetSeq.length(); i++){ 
 
         if(bracetSeq[i] == ']'){
-
-            if(!ch.empty() && ch.top() == '['){
+            if(ch.empty() || ch.top() == '['){
                 if(!ch.empty()) ch.pop();
                 else return false;
             }else return false;
-
         }else if(bracetSeq[i] == ')'){
-
-            if(!ch.empty() & ch.top() == '('){
+            if(ch.empty() || ch.top() == '('){
                 if(!ch.empty()) ch.pop();
                 else return false;
             }else return false;
-
         }else if(bracetSeq[i] == '(' || bracetSeq[i] == '['){
             ch.push(bracetSeq[i]);
             // cout << "pushed " << bracetSeq[i] << endl;
@@ -58,6 +54,3 @@ int main()
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
     myWhile(n);
 }
-
-
-
