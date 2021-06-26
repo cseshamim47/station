@@ -14,5 +14,6 @@ int main()
 
     if(count == r*c) cout << "#Black&White\n";
     else cout << "#Color\n";
+
     
 }
