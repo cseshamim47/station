@@ -10,21 +10,25 @@ using namespace std;
 
 void solve(){ }
 
+bool primes[MAX];
+
 bool isPrime(int prime){
     if(prime < 2) return false;
-    for(int i = 2; i*i < prime; i++){
-        if(prime % i == 0) return false; 
-    }
-    return true;
+    if(prime == 2) return true;
+    if(prime % 2 == 0) return false;
+    return primes[prime] == false;
 }
 
-vector<int> getPrime(int n){
-    vector<int>primes;
-    for(int i = 2; i <= n; i++){
-        if(isPrime(i)) primes.push_back(i);
+void getPrime(int n){
+    for(int i = 3; i*i <= n; i+=2){
+        if(primes[i] == false){
+            for(int j = i*i; j <= n; j += i)
+                primes[j] = true;
+        }
     }
-    return primes;
 }
+    
+
 
 int main()
 {
@@ -32,13 +36,20 @@ int main()
     // int t;   cin >> t;   w(t);
     cls
 
-    cout << (isPrime(29) ? "Prime" : "Not Prime") << "\n";
+    // cout << (isPrime(29) ? "Prime" : "Not Prime") << "\n";
+    int n;
+    cin >> n;
 
-    for(auto it : getPrime(31)) cout << it << " - ";  
+    getPrime(n);
+    for(int i = 0; i <= n; i++){
+        if(!isPrime(i)){
+            // if(i != 2) cout << " - ";
+            cout << i;
+        }else cout << "[" << i << "]";  
 
-    cout << pow(10)
-
-
+        if(i != n) cout << " - "; 
+        
+    }
 }
 
 /* 
@@ -66,6 +77,14 @@ bool isPrime(int prime){
 
 /* 
 for 2-n prime numbers : TC --> O(N*sqrt(N))
+bool isPrime(int prime){
+    if(prime < 2) return false;
+    for(int i = 2; i*i < prime; i++){
+        if(prime % i == 0) return false; 
+    }
+    return true;
+}
+
 vector<int> getPrime(int n){
     vector<int>primes;
     for(int i = 2; i <= n; i++){

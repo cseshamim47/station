@@ -7,21 +7,23 @@ using namespace std;
 #define cls system("cls");
 #define dbg cout << "Debug LN : " << __LINE__ << endl;
 #define w(t) while(t--){ solve(); }
-int cnt;
-void solve(){ }
+
+void solve(){
+    ll ignore,  nth;
+    cin >> ignore >> nth;
+    ll l = 0, r = 1e18, mid;
+    while(r - l > 0){
+        mid = l + (r-l)/2;
+        if(mid - mid/ignore < nth) l = mid+1;
+        else r = mid;
+    }
+    cout << l << endl;
+}
 
 int main()
 {
      //        Bismillah
-    // int t;   cin >> t;   w(t);
-    cls
-    int i,j;
-for (i = 0; i < 5; i++) {
-    cnt++;
-    for (j = 5; j > i; j--) {
-        cnt++;
-    }
-}
-cout << cnt << endl;
+    int t;   cin >> t;   w(t);
+    // cls
 
 }

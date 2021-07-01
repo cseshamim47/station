@@ -1,10 +1,10 @@
 public class a {
-
-    private a(String n, int m){
-        System.out.println(n + " " + m);
+    public a(int b) {
+        System.out.println("A class");
+        b = b;
     }
-    public static void main(String[] args){
-        a obj = new a("shamim",1);
 
+    public static void main(String[] argv){
+        a obj = new a(5);
     }
 }

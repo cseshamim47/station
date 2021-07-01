@@ -13,7 +13,6 @@ int main()
 {
 	 //        Bismillah
 	// int t;   cin >> t;   w(t);
-	string str = "SHAMIM";
-	int x = str.find('s');
+	int x = powl(2,4.0);
 	cout << x << endl;
 }
