@@ -1,52 +1,14 @@
-#include <iostream>
-
+//Author : Md Shamim Ahmed (20-44242-3)      American International University Bangladesh
+#include <bits/stdc++.h>
 using namespace std;
-
-class bubbleSort{
-    int arr[5];
-    public:
-        void swap(int *a, int *b){
-            int temp = *a;
-            *a = *b;
-            *b = temp;
-        }
-        void sort(int abc[]){
-            int tmp = 0;
-            for(int i=0; i<5; i++){
-                for(int j=i+1; j<5; j++){
-                    if(abc[j] < abc[i]){
-                        // tmp = abc[j];
-                        // abc[j] = abc[i];
-                        // abc[i] =tmp;
-                        swap(&abc[i],&abc[j]);
-                    }
-                }
-            }
-            for(int i = 0; i < 5; i++) arr[i] = abc[i];
-        }
-
-        void print(){
-            for(int i=0; i<5; i++){
-                cout<<arr[i]<<"  ";
-            }
-        }
-};
+#define eps 1e-12
+#define MAX 10000005
+#define ll long long
+ll cnt;
 
 int main()
 {
-    int abc[5];
-    cout << "Enter 5 unsorted integers : " << endl;
-    for(int i = 0; i < 5; i++) cin >> abc[i];
-
-    for(int i=0; i<5; i++){
-        cout<<abc[i]<<"  ";
+      //        Bismillah
+      int n = 3, k = 13;
+    cout << ceil(k/n) << endl;
     }
-    cout<<endl;
-    cout<< "------------" <<endl;
-
-    bubbleSort obj;
-    obj.sort(abc);
-    obj.print();    
-
-    return 0;
-}

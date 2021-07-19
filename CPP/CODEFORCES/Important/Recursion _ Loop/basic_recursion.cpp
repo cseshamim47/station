@@ -4,16 +4,17 @@ using namespace std;
 #define eps 1e-12
 #define MAX 10000005
 #define ll long long
+ll cnt;
+
+void recursion(int n){
+    cout << n << endl;
+    if(n<=0) return;
+    recursion(n-1); 
+    cout << n*n << endl;
+}
 
 int main()
 {
       //        Bismillah
-
-    int size;
-    cin >> size;
-    for(int i = 1; i <= size;i++){
-        cout << i << endl;
-    }
-    // for(auto &i : arr) cout << i << " ";
-    
+    recursion(4);
 }

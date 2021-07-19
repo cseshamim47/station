@@ -1,26 +1,23 @@
+//Author : Md Shamim Ahmed (20-44242-3)      American International University Bangladesh
 #include <bits/stdc++.h>
 using namespace std;
 
 int main()
 {
-    int n;
+    string n;
     cin >> n;
 
-    string str[n];
-    for(int i = 0; i < n; i++){
-        cin >> str[i];
-    }
-    string a = str[0];
-    string b;
-    int teamA = 0;
-    for(int i = 0; i < n; i++){
-        if(str[i] == a) teamA++;
-        else{
-            b = str[i];
+    for(int i = 0; i < n.size(); i++){
+        int cnt = 0;
+        for(int j = i+1; j < n.size(); j++){
+            if(n[i] == n[j]) cnt++;
+            else break;
+        }
+        if(cnt >= 6){
+            cout << "YES" << "\n";
+            return 0;
         }
     }
-    int teamB = n - teamA;    
-    // cout << teamA << " " << teamB << endl;
-    if(teamA > teamB) cout << a << endl;
-    else cout << b << endl;
+    cout << "NO" << "\n";
+
 }
