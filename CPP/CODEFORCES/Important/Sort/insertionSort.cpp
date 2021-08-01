@@ -43,7 +43,7 @@ int main()
             cout << arr[i] << " ";
         }
         printf("\n\n");
-        // gch
+        gch
     }
 
     cout << "Count : " << cnt << endl;

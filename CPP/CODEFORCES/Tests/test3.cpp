@@ -4,36 +4,32 @@ using namespace std;
 #define eps 1e-12
 #define MAX 10000005
 #define ll long long
-#define gch getchar();
-#define cls system("cls");
-#define w(t) while(t--){ solve(); }
-int cnt;
-
-void solve(){}
+ll cnt;
 
 int main()
 {
-	  //        Bismillah
-	 // int t;   cin >> t;   w(t);
-	// cls
-	ll ans = 90;
-	ll cnt = 2;
-	ll i = 2;
-	cout << "case " << cnt << " : ";
-	cout << ans << endl;
-	getchar();
-	cnt += i;
-	i++;
-	while (true)
-	{
-		cout << "case " << cnt << " : ";
-		cnt += i;
-		i++;
-		ans = (ans * 10) + 90;
-		cout << ans << endl;
-		getchar();
-		
-	}
-	
-
+      //        Bismillah
+    cout << ";:" << endl;
 }
+
+
+0 3 0 0 2 3
+
+0 0 0 0 0 1
+
+
+if left >= right ----> skip cnt for right
+if right is greater then dismiss left
+
+
+0 3 0 0 1 3
+
+0 3 0 0 0 3
+
+1 1 0 1 1 1
+
+0 0 0 4 0 5 0 0 0 2
+
+0 1 1 1 1 1 0 0 1 1
+
+curr = 3 < 4 = 0

@@ -11,15 +11,18 @@ void solve(){
     int r,c;
     cin >> r >> c;
     int arr[r+2][c+2];
+
     for(int i = 0; i < r; i++){
         for(int j = 0; j < c; j++) arr[i][j] = 0;
     }
 
     for(int i = 0; i < c; i+=2) arr[0][i] = 1;
+
     for(int i = 2; i < r; i+=2){
         arr[i][0] = 1;
         arr[i][c-1] = 1;
     }
+    
     for(int i = 2; i < c-2; i+=2){
         arr[r-1][i] = 1;
     }
