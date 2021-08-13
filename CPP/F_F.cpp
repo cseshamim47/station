@@ -9,6 +9,13 @@ ll cnt;
 int main()
 {
       //        Bismillah
-   char c = '*';
-   cout << isalpha(c) << endl;
+    int n;
+    while(cin >> n)
+    {
+        if(n == 42)
+        {
+            break;
+        }
+        cout << n << endl;
+    }
 }

@@ -1,33 +1,27 @@
+//Author : Md Shamim Ahmed (20-44242-3)      American International University Bangladesh
 #include <bits/stdc++.h>
 using namespace std;
-
+#define eps 1e-12
+#define MAX 10000005
 #define ll long long
-#define w(t) while(t--){ solve(); }
-
-void solve(){
-  ll cnt = 0;
-  int a;
-    int b;
-    cin >> a >> b;
-    int gcd = __gcd(a,b);
-    // int root = sqrtf(gcd);
-    int i;
-    for(i = 1; i*i <= gcd; i++)
-    {
-        if(a % i == 0 && b % i == 0){
-            cnt+=2;
-        }
-    }
-    i--;
-    if(i*i == gcd) cnt--;
-    
-    cout << cnt << "\n";
-}
+ll cnt;
 
 int main()
 {
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-    int t;   cin >> t;   w(t);
-
+      //        Bismillah
+    int n;
+    cin >> n;
+    string str;
+    cin >> str;
+    for(int i = 1; i <= n; i++)
+    {
+        if(str[i-1] != '1') continue;
+        if(i & 1)
+        {
+            cout << "Takahashi" << "\n";
+        }
+        else 
+            cout << "Aoki" << "\n";
+        break;
+    }
 }

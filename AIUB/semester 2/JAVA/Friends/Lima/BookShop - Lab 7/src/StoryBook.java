@@ -5,7 +5,6 @@ public class StoryBook extends Book{
         super(bookTitle,authorName,isbn,price,availableQuantity);
         this.category = category;
     }
-
     public void setCategory(String category){
         this.category = category;
     }
