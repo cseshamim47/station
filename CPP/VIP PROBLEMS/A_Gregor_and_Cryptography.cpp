@@ -4,10 +4,21 @@ using namespace std;
 #define eps 1e-12
 #define MAX 10000005
 #define ll long long
+#define w(t) while(t--){ solve(); }
 ll cnt;
+
+void solve(){
+    ll n;
+    cin >> n;
+    
+    cout << 2 << " " << (n-1) << "\n";
+    
+}
 
 int main()
 {
       //        Bismillah
-    cout << (2 & 4) << endl;
+    int t;   cin >> t;   w(t);
+    
+
 }

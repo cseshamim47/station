@@ -4,10 +4,23 @@ using namespace std;
 #define eps 1e-12
 #define MAX 10000005
 #define ll long long
+#define w(t) while(t--){ solve(); }
 ll cnt;
+
+void solve(){}
 
 int main()
 {
-      //        Bismillah
-    cout << (2 & 4) << endl;
+      
+    int n,m;
+    cin >> n >> m;
+    int i = 1;
+    while(i <= m){
+        m -= i;
+        if(i == n) i = 0;
+        i++;
+    }
+
+    cout << m << endl;
+
 }

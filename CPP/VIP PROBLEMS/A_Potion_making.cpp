@@ -4,10 +4,23 @@ using namespace std;
 #define eps 1e-12
 #define MAX 10000005
 #define ll long long
+#define w(t) while(t--){ solve(); }
 ll cnt;
+
+void solve(){
+    int k; 
+    cin >> k;
+    int w = 100 - k;
+    int GCD = __gcd(k,w);
+    k /= GCD;
+    w /= GCD;
+
+    cout << k+w << endl;
+}
 
 int main()
 {
       //        Bismillah
-    cout << (2 & 4) << endl;
+     int t;   cin >> t;   w(t);
+
 }

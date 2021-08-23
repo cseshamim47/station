@@ -16,7 +16,6 @@ public:
     bool Search(BST*,int);
     void inorder(BST*);
     void level(BST*,int);
-
 };
 
 BST bst, *root = NULL;
@@ -67,7 +66,6 @@ BST* BST::Delete(BST* root, int deldata)
     return root;
 
 }
-
 
 BST::BST(int value)
 {
@@ -129,6 +127,40 @@ void ll_insert(linkedList** head_ref,int data)
     newNode->data = data;
     newNode->next = *head_ref;
     *head_ref = newNode;
+}
+void ll_insert_tail(linkedList** head,int data)
+{
+    linkedList* tmp = new linkedList();
+    linkedList* tr = *head;
+    tmp->data = data;
+    tmp->next = NULL;
+    if(!(*head))
+    {
+        *head = tmp;
+        return;
+    }
+    while(tr->next != NULL)
+    {
+        tr = tr->next;
+    }
+    tr->next = tmp;
+}
+void ll_insert_after(linkedList** head,int key,int data)
+{
+    linkedList* tmp = new linkedList();
+    linkedList* tr = *head;
+    tmp->data = data;
+    if(!(*head))
+    {
+        *head = tmp;
+        return;
+    }
+    while(tr->data != key)
+    {
+        tr = tr->next;
+    }
+    tmp->next = tr->next;
+    tr->next = tmp;
 }
 
 void ll_Delete(linkedList** head_ref, int key)
@@ -195,7 +227,6 @@ void getCount(linkedList *head)
     }
     cout << "getCount : " << i << endl;
 }
-
 // mixed
 void convert(linkedList** head)
 {
@@ -211,7 +242,7 @@ int main()
 {
 	linkedList *head = NULL;
     int n;
-    cout << "How many integers do you insert into linked list : ";
+    cout << "How many integers do you insert in the linked list : ";
     cin >> n;
     cout << "Insert " << n << " integers : ";
     while(n--)
@@ -221,21 +252,27 @@ int main()
 	    ll_insert(&head,x);
     }
 
+    cout << "Insert an element to tail : ";
+    cin >> n;
+    ll_insert_tail(&head,n);
+
+    cout << "Linked list : ";
+    ll_print(head);
+    cout << "Choose a data to insert after : ";
+    int k;
+    cin >> k;
+    cout << "Insert data after " << k << " : ";
+    cin >> n;
+    ll_insert_after(&head,k,n);
+
+    
     cout << "Linked list : ";
     ll_print(head);
     
     cout << "Insert an element to delete from linked list : ";
     cin >> n;
     ll_Delete(&head,n);
-    // cout << "Updated Linked list : ";
-    // ll_print(head);
-
-    cout << "Insert to search Linked list : ";
-    cin >> n;
-    ll_search(head,n);
-
-    getCount(head);
-
+   
 
     cout << "\n\nBST " << endl;
     convert(&head);  
