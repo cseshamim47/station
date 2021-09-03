@@ -9,7 +9,7 @@ int main()
 
     int* p = &i;
     char* cp = (char*)p; // typecast
-    cout << cp << endl; // A
+    cout << cp << endl;  // A
     cout << *cp << endl; // A
     
     cout << *(cp+2) << endl; // null char

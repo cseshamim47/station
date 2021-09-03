@@ -38,17 +38,18 @@ void segSieve(ll l, ll r){
         int CP = primes[i];
         ll start = ((l+CP-1)/CP) * CP;
         // if(start < l) start += CP;
-        for(ll j = CP; j <= r; j+=CP){
+        for(ll j = start; j <= r; j+=CP){
             if(j-l >= 0)
                 isPrime[j-l] = false;
-            // cout << "-- " << j-l << endl; 
+            if(j-l<0)
+            cout << "-- " << j-l << endl; 
         }
         if(CP == start) isPrime[start-l] = true;
     }
 
     for(int i = 0; i < size; i++){
-        if(isPrime[i])
-            cout << (l+i) << endl;
+        // if(isPrime[i])
+            // cout << (l+i) << endl;
     }
 }
 

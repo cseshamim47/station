@@ -10,13 +10,8 @@ void solve()
 
 int main()
 {
-    while(true)
-    {
-        int* a = new int;
-        *a = 5;
-        cout << *a << endl;
-        delete a;
-        // int* p = &a;
-        // cout << a-- << endl;
-    }
+    ll m,n,a;
+    cin >> m >> n >> a;
+    ll ans = ceil(1.00*m/a)*ceil(1.00*n/a);
+    cout << ans << endl;
 }

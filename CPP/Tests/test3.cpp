@@ -1,13 +1,18 @@
-//Author : Md Shamim Ahmed (20-44242-3)      American International University Bangladesh
 #include <bits/stdc++.h>
 using namespace std;
-#define eps 1e-12
-#define MAX 10000005
+
+#define w(t) int t; cin >> t; while(t--){ solve(); }
 #define ll long long
-ll cnt;
+#define MAX 1000006
+
+void solve()
+{}
 
 int main()
 {
-      //        Bismillah
-    cout << (2 & 4) << endl;
+	  //        Bismillah
+	// w(t)
+	vector<int>v[10];
+	v[0] = 10;
+	cout << v[0] << endl;
 }
