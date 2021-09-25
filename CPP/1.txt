@@ -1,16 +1,5 @@
-209
-209
-209
-209
-209
-209
-209
-209
-209
-209
-209
-209
-209
-209
-209
-209
+code -r name.cpp
+ls ./ *Folder_Name* -Recurse -Directory
+ls ./ *file_name* -Recurse -File
+
+

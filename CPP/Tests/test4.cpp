@@ -1,22 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define w(t) int t; cin >> t; while(t--){ solve(); }
-#define ll long long
-#define MAX 1000006
-
-void solve()
-{}
 
 int main()
 {
-    while(true)
-    {
-        int* a = new int;
-        *a = 5;
-        cout << *a << endl;
-        delete a;
-        // int* p = &a;
-        // cout << a-- << endl;
-    }
+    //    Bismillah
+    int n = 5;
+    int arr[n] {1,2,3,4,5};
+    int k = 1;
+    if(idFind(arr,n,k)) cout << "Found" << endl;
+    else cout << "Not Found" << endl;
 }
+
+
+
+

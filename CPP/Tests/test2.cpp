@@ -1,41 +1,52 @@
-//Author : Md Shamim Ahmed (20-44242-3)      American International University Bangladesh
+//transpose matrix
+//Author : RABBI HOSSEN (20-44220-3)      American International University Bangladesh
+#include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
-#define eps 1e-12
-#define MAX 40000
-#define ll long long
-ll cnt;
-
-vector<int> primes;
-
-void genPrime()
-{
-    bool isPrime[MAX];
-    for(int i = 3; i < MAX; i+=2) isPrime[i] = true;
-
-    for(int i = 3; i*i < MAX; i+=2)
-    {
-        if(isPrime[i])
-            for(int j = i*i; j <= MAX; j+=i)
-                isPrime[j] = false;
-    }
-
-    primes.push_back(2);
-    for(int i = 3; i < 30; i+=2)
-    {
-        if(isPrime[i])
-            primes.push_back(i);
-    }
-}
-
-void segSieve(ll L, ll R)
-{
-    
-}
-
 int main()
 {
-      //        Bismillah
-      genPrime();
-    
+    //               Bismillah
+    int a;
+    cin >> a;
+    int arr[a][a];
+	int tpose[a][a];
+    for (int i = 1; i <= a; i++)
+    {
+        for (int j = 1; j <= a; j++)
+        {
+            cin >> arr[i][j];
+			tpose[j][i] = arr[i][j];
+        }
+    }
+    cout << "\n";
+
+    for (int i = 1; i <= a; i++)
+    {
+        for (int j = 1; j <= a; j++)
+        {
+            cout << arr[i][j] << " ";
+        }
+        cout << "\n";
+    }
+
+    cout << "\ntranspos matrix:\n";
+
+    for (int i = 1; i <= a; i++)
+    {
+        for (int j = 1; j <= a; j++)
+        {
+            // cout << arr[j][i] << " ";
+			cout << tpose[i][j] << " ";
+        }
+        cout << "\n";
+    }
+    return 0;
 }
+
+/*
+3
+1 2 3
+4 5 6
+7 8 9
+
+*/

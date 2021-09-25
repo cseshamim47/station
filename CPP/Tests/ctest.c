@@ -1,16 +1,22 @@
 #include <stdio.h>
 
+
+
 int main()
 {
-    char id[] = "0123012300505050";
-    int size = sizeof(id)-1;
-    int sum = 0;
-    for(int i = 0; i < size; i++)
+    int i,j;
+    for(int i = 1; i < 6; i++)
     {
-        if(id[i] != '0')
+        for(j = 1; j < 4; j++)
         {
-            sum += id[i] - '0'; 
+            printf("(%d %d), ",i,j);
+            if(i % j == 0 && j%i == 0)
+            {
+                printf("(%d %d), ",i,j);
+            }
         }
-    }
-    printf("%d",sum);
+    }    
 }
+
+// 5
+// 2 1 5 4 3
