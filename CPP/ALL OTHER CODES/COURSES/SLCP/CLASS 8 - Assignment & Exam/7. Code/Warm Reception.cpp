@@ -16,13 +16,26 @@ void solve()
     {
         cin >> leave[i];
     }
-    int cnt = 1;
-    int last = leave[0];
-    for(int i = 1; i < n; i++)
+
+    sort(came,came+n);
+    sort(leave,leave+n);
+
+    int cnt = 0;
+    int j = 0;
+
+    for(int i = 0; i < n; i++)
     {
-        if(last > came[i]) cnt++;
-        last = min(last,leave[i]);
+        cout << came[i] << " " << leave[i] << endl;
     }
+
+    for(int i = 0; i < n; i++)
+    {
+        if(came[i] < leave[j]) cnt++;
+        else j++;
+
+        cout << j << endl;
+    }
+
 
     cout << cnt << endl;
 
@@ -32,3 +45,4 @@ int main()
 {
     solve();
 }
+

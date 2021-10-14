@@ -29,12 +29,14 @@ int main()
     int k = mini;
     k++;
     k %= n;
-    cout << k << endl;
+    // cout << k << endl;
     while(k != mini)
     {
-        cout << (k-1+n)%n << endl;
+        // cout << (k-1+n)%n << endl;
+
         // getchar();
         ans[k] = min(ans[(k-1+n)%n]+handOver[(k-1+n)%n],get[k]);
+        // cout << ans[k] << " " << k << endl;
         k++;
         k%=n;
     }

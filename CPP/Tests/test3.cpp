@@ -1,18 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define w(t) int t; cin >> t; while(t--){ solve(); }
-#define ll long long
-#define MAX 1000006
-
-void solve()
-{}
-
 int main()
 {
-	  //        Bismillah
-	// w(t)
-	vector<int>v[10];
-	v[0] = 10;
-	cout << v[0] << endl;
+	//    Bismillah
+	vector<int> v{5,4,3,2,1};
+	
+	vector<pair<int,int>> pr;
+	pr.push_back({1,2});
+	pr.push_back({4,2});
+	// sort(arr,arr+5);
+	vector<int>::iterator it;
+	it = find(v.begin(),v.end(),2);  
+	cout << it-v.begin() << endl; 
 }
