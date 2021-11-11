@@ -19,6 +19,7 @@ int main()
     cin >> size;
     int arr[size];
 
+    int cnt = 0;
     for(int i = 0; i < size; i++){
         cin >> arr[i];
     }
@@ -35,7 +36,8 @@ int main()
                 totalSwap++;
                 isRequired = true;
             }
-            for(auto x : arr) cout << x << " ";
+            cnt++;
+            // for(auto x : arr) cout << x << " ";
         }
         cout << "\n";
         cout << "Pass " << i + 1 << endl;
@@ -46,10 +48,11 @@ int main()
         printf("\n\n");
         gch
         
-        if(!isRequired) break;
+        // if(!isRequired) break;
     }
 
     cout << "Total swap : " << totalSwap << endl;
+    cout << "Total comp : " << cnt << endl;
 
     
 }
