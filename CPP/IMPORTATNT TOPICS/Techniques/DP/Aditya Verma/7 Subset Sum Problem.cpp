@@ -50,9 +50,6 @@ void solve()
 
 int32_t main()
 {
-      //        Bismillah
-    // BOOST
-    // w(t)
     solve();
 }
 
@@ -60,6 +57,7 @@ int32_t main()
 // 3
 // 1 4 2
 // 3
+// true
 
 // 3
 // 1 4 6

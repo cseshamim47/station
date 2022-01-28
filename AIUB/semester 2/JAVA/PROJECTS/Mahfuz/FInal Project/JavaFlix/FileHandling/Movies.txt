@@ -1,0 +1,54 @@
+1. The Shawshank Redemption
+   Imdb         : 9.3
+   Cast         : Tim Robbins, Morgan Freeman, Bob Gunton, William Sadler, Clancy Brown, Gil Bellows, James Whitmore
+   Release Date : September 10, 1994
+   Description  : Andy Dufresne, a successful banker, is arrested for the murders of his wife and her lover, 
+                  and is sentenced to life imprisonment at the Shawshank prison. He becomes the most unconventional prisoner.
+   Show Time    : 2h 22m
+    
+
+2. The Godfather
+
+   Imdb         : 9.2
+   Cast         : Marlon Brando Al Pacino, James Caan, Richard Castellano, Robert Duvall, Sterling Hayden, John Marley, Richard Conte, Diane Keaton
+   Release Date : March 14, 1972
+   Description  : It is the first installment in The Godfather trilogy. The story, spanning from 1945 to 1955, 
+                  chronicles the Corleone family under patriarch Vito Corleone (Brando), focusing on the transformation of his youngest son, 
+                  Michael Corleone (Pacino), from reluctant family outsider to ruthless mafia boss.
+   Show Time    : 2h 58m
+   
+3. The Godfather Part II
+
+   Imdb         : 9.0
+   Cast         : Al Pacino, Robert Duvall, Diane Keaton, Robert De Niro ,Talia Shire, Morgana King, John Cazale, Mariana Hill, Lee Strasberg
+   Release Date : December 12, 1974
+   Description  : Michael, Vito Corleone's son, attempts to expand his family's criminal empire. While he strikes a business deal with gangster Hyman Roth, 
+                  he remains unaware of the lurking danger.
+   Show Time    : 3h 22m
+
+4. The Dark Knight
+
+   Imdb         : 9.0
+   Cast         : Christian Bale, Michael Caine, Heath Ledger, Gary Oldman, Aaron Eckhart, Maggie Gyllenhaal, Morgan Freeman
+   Release Date : July 14, 2008
+   Description  : After Gordon, Dent and Batman begin an assault on Gotham's organised crime, the mobs hire the Joker, 
+                  a psychopathic criminal mastermind who offers to kill Batman and bring the city to its knees.
+   Show Time    : 2h 32m
+
+5. 12 Angry Men
+
+   Imdb         : 9.0
+   Cast         : Henry Fonda, Lee J. Cobb, Ed Begley, E.G. Marshall, Jack Warden
+   Release Date : April 1957
+   Description  : A dissenting juror in a murder trial slowly manages to convince the others that the case is not as obviously clear as it seemed in court.
+   Show Time    : 1h 36m
+
+6. Schindler's List
+
+   Imdb         : 8.9
+   Cast         : Liam Neeson, Ben Kingsley, Ralph Fiennes, Caroline Goodall, Jonathan Sagall, Embeth Davidtz
+   Release Date : November 30, 1993
+   Description  : Oskar Schindler, a German industrialist and member of the Nazi party, 
+                  tries to save his Jewish employees after witnessing the persecution of Jews in Poland.
+   Show Time    : 3h 17m
+

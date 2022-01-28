@@ -1,0 +1,8 @@
+
+
+JavaFlix:
+Customer Name: Piash
+PhoneNumber : 01622898693
+Movie :  The Godfather 
+Timing : 1| Morning: 9:00 AM
+Price : $15

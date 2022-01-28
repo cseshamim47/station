@@ -43,10 +43,33 @@ void solve()
         }
     }
 
-    
+    int range = sum;
+    sum/=2;
+
+    vector<int> v;
+
+    for(int i = 0; i <= sum; i++)
+    {
+        if(up[n][i])
+            v.push_back(i);
+    }
+
+    int mn = INT_MAX;
+    for(int i = 0; i < (int)v.size(); i++)
+    {
+        mn = min(mn,range - 2*v[i]);
+    }
+
+    cout << mn << endl;
 }
 
 int32_t main()
 {
     solve();
 }
+
+
+// 3
+// 1 2 7
+
+// 4

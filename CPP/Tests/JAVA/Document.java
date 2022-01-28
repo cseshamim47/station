@@ -1,5 +1,5 @@
 
-// package Tests.JAVA;
+package Tests.JAVA;
 
 
 public class Document {
