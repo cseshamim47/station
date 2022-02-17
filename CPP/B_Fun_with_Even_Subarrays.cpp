@@ -31,7 +31,7 @@ void solve()
         ans++;
         i -= cnt;
         cnt *= 2;
-        while(arr[i] == last && i >= 0) i--,cnt++;
+        while(i >= 0 && arr[i] == last) i--,cnt++;
     }
     cout << ans << endl;
     
