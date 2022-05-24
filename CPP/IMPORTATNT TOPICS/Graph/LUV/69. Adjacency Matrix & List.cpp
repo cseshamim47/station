@@ -36,10 +36,11 @@ int main()
 
     for(pair<int,int> child : graph2[3]) // check tc : o(n)
     {
-        if(child.first == 5)
-        {
-            cout << "weight :  " << child.second << endl;
-        }
+        // if(child.first == 5)
+        // {
+        //     cout << "weight :  " << child.second << endl;
+        // }
+        cout << 3 << " " << child.first << " " << child.second << endl;
     }
         
 }

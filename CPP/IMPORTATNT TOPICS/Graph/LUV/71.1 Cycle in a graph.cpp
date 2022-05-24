@@ -50,9 +50,6 @@ void solve()
     }
 
         cout << "No cycle" << endl;
-
-    
-
 }
 
 int32_t main()

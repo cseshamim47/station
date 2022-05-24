@@ -53,6 +53,7 @@ int main()
     PopMax();
     PopMax();
     PopMax();
+    PopMax();
     print();
     
 }

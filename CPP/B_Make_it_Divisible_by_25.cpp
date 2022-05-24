@@ -11,43 +11,34 @@ void solve()
 {
     string str;
     cin >> str;
-    // 00 25 50 75
-    int zz = 100,tf = 100, fz = 100,sf = 100;
-    int t = 100, f = 100, z = 100, s = 100;
-    int sz = (int)str.size();
-    for(int i = 0; i < sz; i++)
-    {
-        if(i != sz-1 && str[i] == '0' && str[i+1] == '0')
-        {
-            zz = (int)str.size()-i-2;
-        }
-        
-        if(str[i] == '2' || str[i] == '5')
-        {
-            // if(str[i] == '2' && )
-        }
 
-    }
-
-    for(int i = 0; i < sz; i++)
+    int ans = INT_MAX;
+    for(int i = str.size()-1; i >= 0; i--)
     {
-        if(str[i] == '5' || str[i] == '0')
+        if(str[i]=='5' || str[i]=='0')
         {
-            if(str[i] == '5' && z == 100)
+            int cnt = INT_MAX;
+            for(int j = i-1; j >= 0; j--)
             {
-                f = i;
-            }else if(str[i] == '0' && f != 100)
-            {
-                z = i;
-            }
+                int r = str.size()-1-i;
+                int m = i-j-1;
+                if(str[i] == '5' && (str[j] == '2' || str[j] == '7'))
+                {
+                    cnt = min(cnt,r+m);
+                }else if(str[i] == '0' && (str[j] == '5' || str[j] == '0'))
+                {
+                    cnt = min(cnt,r+m);
+                }
+                ans = min(ans,cnt);
+            }       
         }
     }
-    // 50555
-    fz = f + (z-f-1) + (sz-z-1);
-    // cout << f << " " << z << endl;
-    cout << fz << " " << zz << endl;
-    // cout << zz << ' ' << z << " " << t << " " << f << " " << s << endl;
-    //  255555
+    cout << ans << endl;
+
+    // 25
+    // 50
+    // 75
+    // 00
 }
 
 int32_t main()

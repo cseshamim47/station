@@ -12,8 +12,6 @@ int main()
         cin >> x[i]; 
     }
     
-    
-
     for(int i = 0; i < n; i++){
         int  len = x[i].length();
         for(int j = 0; j<1; j++){

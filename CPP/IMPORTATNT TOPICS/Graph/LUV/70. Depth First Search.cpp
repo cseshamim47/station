@@ -8,13 +8,13 @@ bool vis[N];
 
 void dfs(int vertex)
 {
-    cout << vertex << endl;
+    // cout << vertex << endl;
     // if(vistied[child]) return;
     vis[vertex] = true;
     // Take action on vertex after entering the vertex
     for(int child : graph[vertex])
     {
-        cout << "Parent : " << vertex << ", child : " << child << endl;
+        // cout << "Parent : " << vertex << ", child : " << child << endl;
         // Take action on child before entering the child node   
         if(vis[child]) continue;
         dfs(child);

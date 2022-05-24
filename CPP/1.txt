@@ -5,7 +5,9 @@ ls ./ *file_name* -Recurse -File
 
 
 ###### TO DOS ######
-1. need dp : https://vjudge.net/contest/460476#problem/T
+Subarray 
+Monkey Bananna Problem
+
 
 
 
