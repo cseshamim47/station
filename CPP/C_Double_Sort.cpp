@@ -64,63 +64,47 @@ void solve()
     int i,j,m,n;
     n = in;
     vi v(n);
-    vi cv(n);
+    vi vv(n);
     fo(i,n) v[i] = in;	
 
     m = n;
-    vi vv(m);
-    vi cvv(m);
     fo(i,m) vv[i] = in;	
-    cv = v;
-    cvv = vv;
+    
     bool ok = true;
 
     vector<pair<int,int> > ans;
-    while(ok)
+
+    fo(j,n)
     {
         Fo(i,1,n)
         {
-            ok = false;
             if(v[i] < v[i-1])
             {
                 swap(v[i],v[i-1]);
                 swap(vv[i],vv[i-1]);
                 ans.push_back({i,i+1});
-                ok = true;
+            }else if(vv[i] < vv[i-1])
+            {
+                swap(v[i],v[i-1]);
+                swap(vv[i],vv[i-1]);
+                ans.push_back({i,i+1});
             }
         }  
+
     }
 
+    // for(auto x : v) cout << x << " ";nl
+    // for(auto x : vv) cout << x << " ";nl
     if(is_sorted(all(v)) && is_sorted(all(vv)))
     {
         cout << ans.size() << endl;
         for(auto x : ans) cout << x.first << " " << x.second << endl;
         return;
-    }
-    v = cv;
-    vv = cvv;
-    ans.clear();
-    while(ok)
+    }else 
     {
-        Fo(i,1,n)
-        {
-            ok = false;
-            if(vv[i] < vv[i-1])
-            {
-                swap(v[i],v[i-1]);
-                swap(vv[i],vv[i-1]);
-                ok = true;
-                ans.push_back({i,i+1});
-            }
-        }  
+        cout << -1 << endl;
     }
-
-    if(is_sorted(all(v)) && is_sorted(all(vv)))
-    {
-        cout << ans.size() << endl;
-        for(auto x : ans) cout << x.first << " " << x.second << endl;
-
-    }else cout << -1 << endl;
+    
 }
 
 int32_t main()

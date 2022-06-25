@@ -17,7 +17,7 @@ using namespace std;
 #define F first
 #define S second
 #define all(x) x.begin(), x.end()
-#define clr(x) memset(x, 0, sizeof(x))
+#define clr(x,y) memset(x, y, sizeof(x))
 #define sortall(x) sort(all(x))
 #define tr(it, a) for(auto it = a.begin(); it != a.end(); it++)
 #define PI 3.1415926535897932384626
