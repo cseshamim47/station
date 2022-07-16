@@ -1,0 +1,161 @@
+class Employee 
+{
+	public String name;
+	public String ID;
+    private EmpSalary empSalary;
+    private String phoneNo;
+    public String email;
+	
+	
+	public Employee()
+	{
+	}
+	
+	public Employee(String name,String ID,EmpSalary empSalary,String phoneNo,String email )
+	{
+		this.name=name;
+		this.ID=ID;
+		this.empSalary=empSalary;
+		this.phoneNo=phoneNo;
+		this.email=email;
+	}
+	
+	public String getphoneNo()
+	{
+		return this.phoneNo ;
+	}
+	public void show()
+	{
+		System.out.println("Name: " + name) ;
+		System.out.println("ID: " + ID) ;
+		System.out.println("Phone Number: " +this.phoneNo) ;
+		System.out.println("Email: " + email) ;
+		System.out.println("Basic Amount: " + empSalary.getbasicAmount()) ;
+		System.out.println("Festival Bonus: " + empSalary.getfestivalBonus()) ;
+		System.out.println("Overtime Amount: " + empSalary.getovertimeAmount()) ;
+		
+	}
+}
+
+************************************************************************************************************
+
+class EmpSalary
+{
+	private double basicAmount;
+    private double festivalBonus;
+    private double overtimeAmount;
+	
+	public EmpSalary()
+	{
+	}
+   public EmpSalary(double basicAmount, double festivalBonus,double overtimeAmount)
+   {
+	 this.basicAmount =basicAmount;
+	 this.festivalBonus =festivalBonus;
+	 this.overtimeAmount =overtimeAmount;
+	 
+   }
+    public double getbasicAmount()
+	{
+		return this.basicAmount ;
+	}
+	public double getfestivalBonus()
+	{
+		return this.festivalBonus;
+	}
+	public double getovertimeAmount()
+	{
+		return this.overtimeAmount ;
+	}
+
+	
+}
+
+****************************************************************************************************************
+
+class MainEmployee
+{
+	public static void main(String arg[])
+	{
+		EmpSalary empSalary = new EmpSalary( 30000.28,15000.77,12000.22) ;
+		
+		Employee e = new Employee( "Asif" , "A1523" , empSalary, "+88017373838331","asif@gmail.com") ;
+		e.show() ;
+		
+	}
+}
+
+******************************************************************************************************************
+
+
+class Library
+{
+public String name;
+public String address;
+public Book book[]= new Book[2] ;
+
+public Library()
+{
+	
+}
+public Library(String name,String address,Book book1 , Book book2)
+{
+	this.name=name;
+	this.address=address;
+	this.book[0]=book1;
+	this.book[1]=book2;
+	
+}
+public void show()
+{
+	System.out.println("Name: " + name) ;
+	System.out.println("Address: " + address) ;
+	System.out.println("First Book" ) ;
+	System.out.println("Book name: " +book[0].bookName) ;
+	System.out.println("Author Name: " + book[0].authorName) ;
+	System.out.println("Number of Copy: " + book[0].noOfCopy) ;
+	System.out.println("Second Book" ) ;
+	System.out.println("Book name: " +book[1].bookName) ;
+	System.out.println("Author Name: " + book[1].authorName) ;
+	System.out.println("Number of Copy: " + book[1].noOfCopy) ;
+	
+	
+}
+	
+}
+
+*************************************************************************************************
+
+class Book
+{ 
+public String bookName;
+public String authorName;
+public int noOfCopy;
+
+public Book()
+{
+}
+public Book(String bookName,String authorName,int noOfCopy)
+{
+	this.bookName=bookName;
+	this.authorName=authorName;
+	this.noOfCopy=noOfCopy;	
+}
+	
+	
+}
+
+************************************************************************************************
+class MainBook
+{
+	public static void main(String arg[])
+	{
+		
+		Book book1= new Book("Shamim ahmed","Easy C++",1277);
+		Book book2 = new Book("Asif Ahmed","tepantor",1189);
+		
+		Library l =new Library("oniket","Nikunja-2 ,Khilkhet,Dhaka",book1,book2);
+		l.show();
+		
+	}
+}

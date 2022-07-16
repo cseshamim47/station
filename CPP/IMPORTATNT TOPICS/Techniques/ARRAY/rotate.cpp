@@ -12,7 +12,7 @@ int main()
     {
         for(int j = 0; j < n; j++)
         {
-            arr[i][j] = cnt;
+            iarr[i][j] = cnt;
             clockwise[j][i] = arr[i][j];
             anti_clockwise[j][i] = arr[i][j];
             cnt++;
