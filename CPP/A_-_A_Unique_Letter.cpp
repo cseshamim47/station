@@ -46,36 +46,24 @@ void f()
 {}
 
 int Case;
-int gcd(int a, int b)
-{
-    if(!b) return a;
-    return gcd(b,a%b);
-}
 void solve()
 {
     int i=0,j=0,m=0,n=0,k=0,ans=0,cnt=0,odd=0,even=0;
-    n = in; // input 
-    int l = in, r = in;
-    vi out; // vector
-    Fo(i,1,n+1) // 1-n
+    string str = in;
+    map<char,int> mp;
+    fo(i,s(str)) // for(int i = 0; i < str.size(); i++)
     {
-        k = l/i;
-        if(l%i != 0) k++;
-        if(i*k > r) 
+        mp[str[i]]++; // frequency count
+    }
+    fo(i,s(str))
+    {
+        if(mp[str[i]] == 1) // 
         {
-            NO;
+            cout << str[i] << endl;
             return;
         }
-        out.pb(i*k);
-    }   
-    YES;
-    fo(i,n)
-    {
-        cout << out[i] << " ";
     }
-    nl;
-
-   
+    MONE;
 }
 
 int32_t main()
@@ -83,7 +71,7 @@ int32_t main()
       //        Bismillah
     // fileInput();
     // BOOST
-    w(t)
-    // solve();
+    // w(t)
+    solve();
     // f();
 }

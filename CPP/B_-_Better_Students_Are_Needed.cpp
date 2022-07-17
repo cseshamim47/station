@@ -42,40 +42,72 @@ struct{
     }
 }in;
 
-void f()
-{}
+bool f(pair<int,int> a, pair<int,int> b)
+{
+    if(a.first == b.first) return a.second < b.second;
+    else return a.first > b.first;
+}
 
 int Case;
-int gcd(int a, int b)
-{
-    if(!b) return a;
-    return gcd(b,a%b);
-}
 void solve()
 {
     int i=0,j=0,m=0,n=0,k=0,ans=0,cnt=0,odd=0,even=0;
-    n = in; // input 
-    int l = in, r = in;
-    vi out; // vector
-    Fo(i,1,n+1) // 1-n
-    {
-        k = l/i;
-        if(l%i != 0) k++;
-        if(i*k > r) 
-        {
-            NO;
-            return;
-        }
-        out.pb(i*k);
-    }   
-    YES;
+    n = in;
+    int a = in, b = in, c = in;
+    vector<pair<int,int> > maths(n);
+    vector<pair<int,int> > english(n);
+    vector<pair<int,int> > total(n);
+
     fo(i,n)
     {
-        cout << out[i] << " ";
+        int x = in;
+        maths[i] = make_pair(x,i+1);
     }
-    nl;
+    fo(i,n)
+    {
+        int x = in;
+        english[i] = make_pair(x,i+1);
+        total[i] = make_pair(english[i].first+maths[i].first,i+1);
+    }
 
-   
+    sort(all(maths),f); // sort(maths.begin(),maths.end(),f); decreasing
+    sort(all(english),f);
+    sort(all(total),f);
+
+    vi out;
+    map<int,int> mp;
+    fo(i,a)
+    {
+        out.pb(maths[i].second);
+        mp[maths[i].second]++;
+    }
+    // deb(out.size());
+    fo(i,b)
+    {
+        if(mp[english[i].second])
+        {
+            b++;
+            continue;
+        }
+        mp[english[i].second]++;
+        out.pb(english[i].second);
+    }
+    // deb(out.size());
+
+    fo(i,c)
+    {
+        if(mp[total[i].second])
+        {
+            c++;
+            continue;
+        }
+        mp[total[i].second]++;
+        out.pb(total[i].second);
+    }
+    sort(all(out));
+    for(auto x : out) cout << x << endl;
+
+
 }
 
 int32_t main()
@@ -83,7 +115,7 @@ int32_t main()
       //        Bismillah
     // fileInput();
     // BOOST
-    w(t)
-    // solve();
+    // w(t)
+    solve();
     // f();
 }

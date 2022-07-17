@@ -44,38 +44,26 @@ struct{
 
 void f()
 {}
+int x,y;
+int red(int n);
+int blue(int n)
+{
+    if(n == 1) return 1;
+    return red(n-1) + y*blue(n-1);
+}
+int red(int n)
+{
+    if(n == 1) return 0;
+    return red(n-1) + x*blue(n);
+}
 
 int Case;
-int gcd(int a, int b)
-{
-    if(!b) return a;
-    return gcd(b,a%b);
-}
 void solve()
 {
     int i=0,j=0,m=0,n=0,k=0,ans=0,cnt=0,odd=0,even=0;
-    n = in; // input 
-    int l = in, r = in;
-    vi out; // vector
-    Fo(i,1,n+1) // 1-n
-    {
-        k = l/i;
-        if(l%i != 0) k++;
-        if(i*k > r) 
-        {
-            NO;
-            return;
-        }
-        out.pb(i*k);
-    }   
-    YES;
-    fo(i,n)
-    {
-        cout << out[i] << " ";
-    }
-    nl;
-
-   
+    n = in;
+    x = in, y = in;
+    cout << red(n) << endl;
 }
 
 int32_t main()
@@ -83,7 +71,7 @@ int32_t main()
       //        Bismillah
     // fileInput();
     // BOOST
-    w(t)
-    // solve();
+    // w(t)
+    solve();
     // f();
 }
