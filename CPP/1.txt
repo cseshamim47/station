@@ -1,12 +1,18 @@
+###### some useful codes ######
 code -r name.cpp
 ls ./ *Folder_Name* -Recurse -Directory
 ls ./ *file_name* -Recurse -File
 
-
+###### some useful shortcuts ######
+ctrl shift o -> all function in a file
+ctrl g (put line number ) -> go to that line
+ctrl + click on function 
+ctrl + p to find some tab
 
 ###### TO DOS ######
 Subarray 
-Monkey Bananna Problem
+ 
+
 
 
 

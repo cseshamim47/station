@@ -35,6 +35,10 @@ int main()
         }
 
         cout << "Pass " << i + 1 << endl;
+        cout << "Index : ";
+        for(int i = 0; i < size; i++) 
+        cout << i+1 << " ";
+        cout << endl << "Value : ";
         for (int i = 0; i < size; i++)
         {
             cout << arr[i] << " ";
