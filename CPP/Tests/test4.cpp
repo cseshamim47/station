@@ -4,12 +4,12 @@ using namespace std;
 
 int main()
 {
-    //    Bismillah
-    int n = 5;
-    int arr[n] {1,2,3,4,5};
-    int k = 1;
-    if(idFind(arr,n,k)) cout << "Found" << endl;
-    else cout << "Not Found" << endl;
+    double x = 1.2;
+
+    // Explicit conversion from double to int
+    int sum = x + 1;
+
+    cout << "Sum = " << sum;
 }
 
 

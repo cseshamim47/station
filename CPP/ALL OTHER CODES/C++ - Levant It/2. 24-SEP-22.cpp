@@ -2,7 +2,9 @@
 #include <math.h>
 using namespace std;
 
-#define PI 3.1416
+#define debug cout << "I'm here" << endl;
+#define print(x) cout << x << endl;
+#define PI 3.1416 /// macro
 
 void random()
 {
@@ -18,7 +20,7 @@ void random()
 
 void control()
 {
-    if(1 == 2)
+    if(true)
     {
         /// kaj gula koro
     }else if(true == false)
@@ -47,7 +49,7 @@ void boolean()
     /// true = (1 or greater than 1) or (-1 or less than -1)
     /// !15 = 0
     /// !0 === true
-    if(10) cout << "If is running" << endl;
+    if(0) cout << "If is running" << endl;
     else cout << "Else is running" << endl;
 }
 
@@ -69,7 +71,15 @@ int main()
     /// local variable
     /// what is scope?
     /// same named variable can be declared within different scope
-    {
+    { /// 1st scope
+        int x;
+        { /// 2nd scope
+            int y = 10;
+            { /// 3rd scope
+
+                cout << y << endl;
+            }
+        }
         /// this is a scope
     }
 
