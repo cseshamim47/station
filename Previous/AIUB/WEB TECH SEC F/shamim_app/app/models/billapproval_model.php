@@ -1,0 +1,85 @@
+<?php 
+
+class Billapproval_Model extends Model{
+	
+	function __construct(){
+		parent::__construct();
+		
+	}
+
+	public function getApprovalForUser(){
+		$fields = array();
+		$where = "zactive = '1' and bizid = ". Session::get('sbizid') ." and xuser='". Session::get('suser') ."'" ;	
+		return $this->db->select("paapproval", $fields, $where);
+	}
+		
+	public function getPur(){
+		//echo $status;
+		$fields = array("date_format(xdate, '%d %M %Y') as xdate","xtxnnum","zemail","xsup","xproject","xappstatus","xemail");
+		//print_r($this->db->select("pabuziness", $fields));die;
+		$where = " bizid = ". Session::get('sbizid') ." and xappstatus in (select xstatus from paapproval where paapproval.bizid=billmst.bizid and paapproval.xuser='".Session::get('suser')."' and paapproval.xdept=billmst.xdept) and xstatus='Pending'";	
+		return $this->db->select("billmst", $fields, $where, " order by xtxnnum");
+	}
+			
+	public function getSingleReq($reqnum){
+		//echo $status;
+		$fields = array("*","(select xlevel from paapproval where paapproval.bizid=billmst.bizid and paapproval.xdept=billmst.xdept and paapproval.xstatus=billmst.xappstatus) as xlevel");
+		//print_r($this->db->select("pabuziness", $fields));die;
+		$where = " bizid = ". Session::get('sbizid') ." and xtxnnum = '".$reqnum."' and xstatus='Pending' and xappstatus in (select xstatus from paapproval where paapproval.bizid=billmst.bizid and paapproval.xuser='".Session::get('suser')."' and paapproval.xdept=billmst.xdept)";
+		return $this->db->select("billmst", $fields, $where);
+	}
+
+	public function getRequisitionByNum($reqnum){
+		$fields = array("`b`.`xrow` as `xrow`", "date_format(`b`.`xdate`,'%d/%m/%Y') as `xdate`","`b`.`xcat` as `xcat`", "`b`.`xdesc` as `xdesc`", "`b`.`xquality` as `xquality`", "`b`.`xprice` as `xprice`", "`b`.`xqty` as `xqty`","(`b`.`xprice`*`b`.`xqty`) as xtotal", "`b`.`xremarks` as `xremarks`");
+		//print_r($this->db->select("pabuziness", $fields));die;
+		$where = "`a`.`xtxnnum`=`b`.`xtxnnum` and `a`.`bizid`=`b`.`bizid` and `a`.`xstatus`='Pending' and `a`.`xappstatus` in (select xstatus from paapproval where paapproval.bizid=`a`.`bizid` and paapproval.xuser='".Session::get('suser')."' and paapproval.xdept=`a`.`xdept`) and `b`.`xtxnnum`='".$reqnum."'";
+		//$where = " bizid = ". Session::get('sbizid') ." and xappstatus = '".$status."' and xstatus='Pending'";	
+		return $this->db->select("`billmst` `a` join `billdet` `b`", $fields, $where, " order by `b`.`xrow`");
+	}
+		
+	public function getImStockDoc(){
+		$fields = array();
+		//print_r($this->db->select("pabuziness", $fields));die;
+		$where = "1=1";	
+		return $this->db->select("vimtrndoc", $fields, $where);
+	}
+
+	public function getItemList($branch=""){
+		$fields = array("xwh","xitemcode", "(select xdesc from seitem where vimstock.bizid=seitem.bizid and vimstock.xitemcode=seitem.xitemcode) as xdesc","xqty");
+		$where = " bizid = ". Session::get('sbizid') ." and xqtypo<>0 or xqty<>0 or xqtyso<>0 $branch";	
+		return $this->db->select("vimstock", $fields, $where, " order by xitemcode");
+	}
+
+	public function getApproval($dept, $level){
+		$fields = array();
+		$where = "zactive='1' and bizid = ". Session::get('sbizid') ." and xdept = '".$dept."' and xlevel = ".$level."" ;
+		return $this->db->select("paapproval", $fields, $where);
+	}
+	public function confirm($postdata,$where){
+		
+		$this->db->update('billmst', $postdata, $where);
+			
+	}
+	public function confirmConcat($updateCode,$where){
+		
+		$this->db->updateConcat('billmst', $updateCode, $where);
+			
+	}
+	
+	public function getMails($module, $status){
+		$fields = array("xuser","(SELECT zaltemail from pausers where pausers.zemail=paapproval.xuser) as zaltemail");
+		$where = "zactive='1' and xmodule = '". $module ."' and xstatus='".$status."' and bizid = ". Session::get('sbizid') ;
+		return $this->db->select("paapproval", $fields, $where);
+	}
+	
+	public function billTotal($reqnum){
+	    $fields = array("sum(xprice*xqty) as xtotal");
+		$where = " xtxnnum = '". $reqnum ."'" ;
+		return $this->db->select("billdet", $fields, $where);
+	}
+	public function getApprovalLevel($dept){
+		$fields = array("max(xlevel) as xlevel");
+		$where = "zactive = '1' and bizid = ". Session::get('sbizid') ." and xdept ='". $dept ."'" ;	
+		return $this->db->select("paapproval", $fields, $where);
+	}
+}

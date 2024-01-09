@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" type="text/css" href="print.css" media="screen, print" /> -->
+    <style>
+        /* * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        } */
+
+        body {
+            /* height: 100vh; */
+        }
+
+        .bill-canvas {
+            margin: 50px 100px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+            min-width: 900px;
+
+            display: grid;
+            grid-template-areas:
+                'b-header b-header'
+                'b-one b-sidebar'
+                'b-two b-sidebar'
+                'b-three b-sidebar'
+                'b-four b-sidebar'
+                'b-five b-sidebar'
+                'b-six b-sidebar';
+            grid-template-columns: 2.5fr 1fr;
+
+            /* grid-template-rows: 70px 50px 140px 30px 190px 30px 80px; */
+        }
+
+        .b-header,
+        .b-sidebar,
+        .b-one,
+        .b-two,
+        .b-three,
+        .b-four,
+        .b-five,
+        .b-six {
+            /* background-color: steelblue; */
+            color: rgb(8, 108, 151);
+            padding: 5px 0 0 5px;
+            border-bottom: rgb(29, 142, 190) 2px solid;
+            border-left: rgb(29, 142, 190) 2px solid;
+        }
+
+        .b-sidebar,
+        .b-header {
+            border-right: rgb(29, 142, 190) 2px solid;
+        }
+
+        .b-header {
+            border-top: rgb(29, 142, 190) 2px solid;
+            display: flex;
+        }
+
+        .b-header {
+            grid-area: b-header;
+        }
+
+        .b-sidebar {
+            grid-area: b-sidebar;
+        }
+
+        .b-one {
+            grid-area: b-one;
+        }
+
+        .b-two {
+            grid-area: b-two;
+        }
+
+        .b-three {
+            grid-area: b-three;
+        }
+
+        .b-four {
+            grid-area: b-four;
+        }
+
+        .b-five {
+            grid-area: b-five;
+        }
+
+        .b-six {
+            grid-area: b-six;
+        }
+
+        @media print {
+            button {
+                display: nb-one;
+            }
+
+            .bill-canvas {
+                margin: 0;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 12px;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="bill-canvas">
+
+        <div class="b-header">
+            <div class="bill-wasa">
+                <img src="wasa.png" alt="wawa-logo">
+            </div class="mujib">
+            <div>
+                <img src="mujib.png" alt="sheikh-mujibur">
+            </div>
+            <div>
+                <h1>JAMALPUR WATER SUPPLY & SEWERAGE AUTHORITY</h1>
+                <h3>Water & Sewerage Bill</h3>
+                <p>[VAT NO: 165133215; Website: www.dwasa.org.bd]</p>
+            </div>
+            <div>
+                <div>
+                    <p>শেখ হাসিনার মূলনীতি গ্রাম শহরের উন্নতি</p>
+                </div>
+            </div>
+            <div>
+                <p>Consumer Copy</p>
+            </div>
+        </div>
+
+        <div class="b-sidebar">
+            <table border="0">
+                <tr>
+                    <td>Bill Month</td>
+                    <td>: March, 2023</td>
+                </tr>
+                <tr>
+                    <td>Bill No</td>
+                    <td>: 1231231232adfasdf312ff</td>
+                </tr>
+                <tr>
+                    <td>Bill Date</td>
+                    <td>: 03/01/1999</td>
+                </tr>
+                <tr>
+                    <td>Bill Date</td>
+                    <td>: 03/01/1999</td>
+                </tr>
+                <tr>
+                    <td>Ann. Valuation</td>
+                    <td>: 03/01/1999</td>
+                </tr>
+                <tr>
+                    <td>Diameter (MM)</td>
+                    <td>: 03/01/1999</td>
+                </tr>
+                <tr>
+                    <td>Diameter (MM)</td>
+                    <td>: 03/01/1999</td>
+                </tr>
+                <tr>
+                    <td>Diameter (MM)</td>
+                    <td>: 03/01/1999</td>
+                </tr>
+                <tr>
+                    <td>Diameter (MM)</td>
+                    <td>: 03/01/1999</td>
+                </tr>
+                <tr>
+                    <td>Diameter (MM)</td>
+                    <td>: 03/01/1999</td>
+                </tr>
+                <tr>
+                    <td>Diameter (MM)</td>
+                    <td>: 03/01/1999</td>
+                </tr>
+            </table>
+        </div>
+        <div class="b-one">b-one</div>
+        <div class="b-two">b-two</div>
+        <div class="b-three">b-three</div>
+        <div class="b-four">b-four</div>
+        <div class="b-five">b-five</div>
+        <div class="b-six">b-six</div>
+
+    </div>
+
+    <button onclick="window.print()">Print</button>
+    <!-- <b-header>b-header</b-header>
+    <main>Content</main>
+    <aside>b-sidebar</aside>
+    <footer>Footer</footer> -->
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/printThis/1.15.0/printThis.min.js"></script>
+
+    <script>
+
+    </script>
+</body>
+
+</html>

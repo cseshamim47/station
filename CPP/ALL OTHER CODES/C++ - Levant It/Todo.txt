@@ -1,0 +1,28 @@
+Class 10 :
+recursion
+File input
+STL : list, set
+Random Number generator
+C++ Class introduction 1
+Problem Solving : pattern printing
+
+Class 11 :
+More about recursion
+STL : next permutation
+C++ Class 2
+scope resolution operator
+static variable
+Problem Solving : 162:3 5 6
+
+Class 12 :
+More about pointers
+Making separate Header file
+Default Value in parameter
+C++ Class 3
+Problem Solving : 
+
+Class 13 :
+More about structures
+Some useful builtin math functions
+C++ Class 3
+Problem Solving : 162:3 5 6

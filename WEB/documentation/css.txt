@@ -1,0 +1,45 @@
+# margin
+- move object 
+- like khata margin
+- margin: top right bottom left [clockwise]
+- order matters for different margin used in same area
+
+
+# 2 types of element
+- inline [a,small,span,strong]
+- block [div,p,h1]
+
+#units 
+- absolute units 
+    - pixels(px)
+    - pt,cm,mm,in,etc
+    - percentages ( use on width only )
+- Relative units
+    - relative to font-size
+        - relative to the parent
+        - em and rem 
+        - 1em means size of parent font size
+        - 1.5em means 150%
+    - relative to viewport
+        - vw,vh, vmin, vmax
+
+- % is responsive where px is not
+- font-size: 62.5% means 10px
+
+# Best practice
+    - font : rem
+    - padding and margin : em
+    - widths: em or parcentage
+
+
+# Media Query 
+- @media 
+- @media media-type and (media-feature){...}
+- media type 
+    - @media screen{...}
+    - @media 
+
+# flex
+- display: flex [creates columns]
+- flex-direction: row; [defalut behaviour. Imagine the parent is now a row and all the childs inside are columns] 
+-

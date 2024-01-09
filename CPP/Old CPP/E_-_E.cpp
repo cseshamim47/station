@@ -1,9 +1,6 @@
 // In the name of ALLAH
-// █▀▄▀█ █▀▄   █▀ █░█ ▄▀█ █▀▄▀█ █ █▀▄▀█   ▄▀█ █░█ █▀▄▀█ █▀▀ █▀▄
-// █░▀░█ █▄▀   ▄█ █▀█ █▀█ █░▀░█ █ █░▀░█   █▀█ █▀█ █░▀░█ ██▄ █▄▀
 // cseshamim47
-// 04-08-2022 23:32:43
-
+// 03-12-2022 21:22:04
 
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
@@ -12,17 +9,15 @@ using namespace __gnu_pbds;
 
 #define int long long
 #define ll unsigned long long
-#define sett tree<int, null_type, less_equal<int>, rb_tree_tag, tree_order_statistics_node_update >  /// cout<<*os.find_by_order(val)<<endl; // k-th element it /// less_equal = multiset, less = set, greater_equal = multiset decreasing, greater = set decreaseing ///  cout<<os.order_of_key(val)<<endl;  // strictly smaller or greater
+#define uset tree<int, null_type, less_equal<int>, rb_tree_tag, tree_order_statistics_node_update >  /// cout<<*os.find_by_order(val)<<endl; // k-th element it /// less_equal = multiset, less = set, greater_equal = multiset decreasing, greater = set decreaseing ///  cout<<os.order_of_key(val)<<endl;  // strictly smaller or greater
 #define fo(i,n) for(i=0;i<n;i++)
 #define Fo(i,k,n) for(i=k;k<n?i<n:i>n;k<n?i+=1:i-=1)
-#define pi(x)	printf("%d\n",x)
-#define pl(x)	printf("%lld\n",x)
-#define plg(x)	printf("%lld ",x)
-#define ps(s)	printf("%s\n",s)
 #define YES printf("YES\n")
 #define NO printf("NO\n")
 #define MONE printf("-1\n")
 #define vi vector<int>
+#define vii vector<pair<int,int>>
+#define pii pair<int,int>
 #define pb push_back
 #define pf push_front
 #define F first
@@ -40,10 +35,10 @@ using namespace __gnu_pbds;
 #define w(t) int t; cin >> t; while(t--){ solve(); }
 template<typename T> istream& operator>>(istream& in, vector<T>& a) {for(auto &x : a) in >> x; return in;};
 template<typename T> ostream& operator<<(ostream& out, vector<T>& a) {for(auto &x : a) out << x << ' ';nl; return out;};
-template<typename T1, typename T2> ostream& operator<<(ostream& out, const pair<T1, T2>& x) {return out << x.f << ' ' << x.s;}
-template<typename T1, typename T2> istream& operator>>(istream& in, pair<T1, T2>& x) {return in >> x.f >> x.s;}
+template<typename T1, typename T2> ostream& operator<<(ostream& out, const pair<T1, T2>& x) {return out << x.F << ' ' << x.S  << endl;}
+template<typename T1, typename T2> istream& operator>>(istream& in, pair<T1, T2>& x) {return in >> x.F >> x.S;}
 template<typename T> void Unique(T &a) {a.erase(unique(a.begin(), a.end()), a.end());}
-#define MAX 1000006
+#define INF 1e9
 
 int g;
 struct{
@@ -54,36 +49,44 @@ struct{
     }
 }in;
 
+int dx[] = {-1, 1, 0, 0,-1,-1, 1,1};
+int dy[] = { 0, 0,-1, 1,-1, 1,-1,1};
+
 void f()
 {}
 
 int Case;
 
-                    // Code Starts From Here       	
+const int N = 1e5+10;
+bool vis[N];
+vector<int> adj[N];
+int color[2];
+void dfs(int vertex,int c)
+{
+    vis[vertex] = true;
+    // cout << c << endl;
+    color[c]++;
+    for(auto child : adj[vertex])
+    {
+        if(vis[child]) continue;
+        dfs(child,(c==0? 1 : 0));
+    }
+}
 
 void solve()
 {
     int a=0,b=0,i=0,j=0,m=0,n=0,k=0,ans=0,cnt=0,odd=0,even=0,sum=0,l=0,r=0,p=0,q=0;
     n = in;
-
-    vector<pair<int,int>> v;
-
-    fo(i,n)
+    m = n-1;
+    fo(i,m)
     {
-        int x = in;
-        v.pb({x,i});
-    }    
-
-    sort(all(v));
-
-    Fo(i,n-1,-1)
-    {
-        sum += i*v[i].F - (n-1-i)*v[i].F;
+        cin >> a >> b;
+        adj[a].push_back(b);
+        adj[b].push_back(a);
     }
+    dfs(1,0);
 
-
-    cout << sum << endl;
-
+    cout << (color[0]*color[1])-(n-1) << endl;
 }
 
 int32_t main()

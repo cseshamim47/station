@@ -1,28 +1,24 @@
 // In the name of ALLAH
-// █▀▄▀█ █▀▄   █▀ █░█ ▄▀█ █▀▄▀█ █ █▀▄▀█   ▄▀█ █░█ █▀▄▀█ █▀▀ █▀▄
-// █░▀░█ █▄▀   ▄█ █▀█ █▀█ █░▀░█ █ █░▀░█   █▀█ █▀█ █░▀░█ ██▄ █▄▀
 // cseshamim47
-// 06-08-2022 21:10:34
-
+// 05-02-2023 07:03:06
 
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
 using namespace std;
 using namespace __gnu_pbds;
 
+#define TIMER class Timer { private: chrono::time_point <chrono::steady_clock> Begin, End; public: Timer () : Begin(), End (){ Begin = chrono::steady_clock::now(); } ~Timer () { End = chrono::steady_clock::now();cerr << "\nDuration: " << ((chrono::duration <double>)(End - Begin)).count() << "s\n"; } } T;
 #define int long long
 #define ll unsigned long long
-#define sett tree<int, null_type, less_equal<int>, rb_tree_tag, tree_order_statistics_node_update >  /// cout<<*os.find_by_order(val)<<endl; // k-th element it /// less_equal = multiset, less = set, greater_equal = multiset decreasing, greater = set decreaseing ///  cout<<os.order_of_key(val)<<endl;  // strictly smaller or greater
-#define fo(i,n) for(i=0;i<n;i++)
-#define Fo(i,k,n) for(i=k;k<n?i<n:i>n;k<n?i+=1:i-=1)
-#define pi(x)	printf("%d\n",x)
-#define pl(x)	printf("%lld\n",x)
-#define plg(x)	printf("%lld ",x)
-#define ps(s)	printf("%s\n",s)
-#define YES printf("YES\n")
-#define NO printf("NO\n")
+#define uset tree<int, null_type, less_equal<int>, rb_tree_tag, tree_order_statistics_node_update >  /// cout<<*os.find_by_order(val)<<endl; // k-th element it /// less_equal = multiset, less = set, greater_equal = multiset decreasing, greater = set decreaseing ///  cout<<os.order_of_key(val)<<endl;  // strictly smaller or greater
+#define fo(i,n) for(int i=0;i<n;i++)
+#define Fo(i,k,n) for(int i=k;k<n?i<n:i>n;k<n?i+=1:i-=1)
+#define YES printf("Yes\n")
+#define NO printf("No\n")
 #define MONE printf("-1\n")
 #define vi vector<int>
+#define vii vector<pair<int,int>>
+#define pii pair<int,int>
 #define pb push_back
 #define pf push_front
 #define F first
@@ -38,14 +34,16 @@ using namespace __gnu_pbds;
 #define nl printf("\n");
 #define endl "\n"
 #define w(t) int t; cin >> t; while(t--){ solve(); }
+#define piis [](auto &a, auto &b){return a.S < b.S;}
+#define piig [](auto &a, auto &b){return a.S > b.S;}
 template<typename T> istream& operator>>(istream& in, vector<T>& a) {for(auto &x : a) in >> x; return in;};
 template<typename T> ostream& operator<<(ostream& out, vector<T>& a) {for(auto &x : a) out << x << ' ';nl; return out;};
-template<typename T1, typename T2> ostream& operator<<(ostream& out, const pair<T1, T2>& x) {return out << x.f << ' ' << x.s;}
-template<typename T1, typename T2> istream& operator>>(istream& in, pair<T1, T2>& x) {return in >> x.f >> x.s;}
+template<typename T1, typename T2> ostream& operator<<(ostream& out, const pair<T1, T2>& x) {return out << x.F << ' ' << x.S  << endl;}
+template<typename T1, typename T2> istream& operator>>(istream& in, pair<T1, T2>& x) {return in >> x.F >> x.S;}
 template<typename T> void Unique(T &a) {a.erase(unique(a.begin(), a.end()), a.end());}
-#define MAX 1000006
 
-int g;
+
+// ********** Input ********** //
 struct{
     template<class T> operator T() {
         T x;
@@ -54,119 +52,151 @@ struct{
     }
 }in;
 
-int f(vector<int> &v)
+// ********** USEFUL FUNCTIONS ********** //
+
+// ********** check wheather k'th bit of n is set or not ********** //
+bool checkBit(int n, int k){ if (n & (1 << k)) return true; else return false; } // O(1)
+
+// ********** GCD ********** //
+int gcd(int a, int b) // O(logN)
 {
-    int sum = 0;
-    int op = 0;
-    for(int i = 0; i < v.size(); i++)
-    {
-        sum += abs(sum-v[i]);
-    }
-    return sum;
+    if(!b) return a;
+    return gcd(b,a%b);
 }
 
-int Case;
+// ********** Extended GCD ********** //
+struct triplet
+{
+    int x;
+    int y;
+    int gcd;
+};
 
-                    // Code Starts From Here       	
+triplet egcd(int a, int b) // O(logN)
+{
+    if(b == 0)
+    {
+        triplet ans;
+        ans.x = 1;
+        ans.y = 1;
+        ans.gcd = a;
+        return ans;
+    }
+    triplet ans1 = egcd(b,a%b);
+    triplet ans;
+    ans.x = ans1.y;
+    ans.y = ans1.x-(a/b)*ans1.y;
+    ans.gcd = ans1.gcd;
+    return ans;
+}
 
+// ********** Useful Variables ********** //
+#define INF 1e9
+int Case,g;
+const int N = 3*1e5;
+
+// ********** DFS useful ********** //
+bool vis[N];
+vector<int> adj[N];
+
+// ********** DFS ********** //
+void dfs(int vertex)
+{
+    vis[vertex] = true;
+    for(auto child : adj[vertex])
+    {
+        if(vis[child]) continue;
+        dfs(child);
+    }
+}
+
+// ********** DFS cycle detection ********** //
+bool dfsCycle(int vertex,int parent) /// have cycle = true, else = false
+{
+    bool a = false;
+    vis[vertex] = true;
+    for(auto child : adj[vertex])
+    {
+        if(child != parent && vis[child])
+        {
+            return true;
+        }else if(vis[child] == false)
+        {
+            a = dfsCycle(child,vertex);
+        }
+    }
+    return a;
+}
+
+
+// ********** Directional Array ********** //
+int dx[] = {-1, 1, 0, 0,-1,-1, 1,1};
+int dy[] = { 0, 0,-1, 1,-1, 1,-1,1};
+
+
+//## Those who cannot remember the past are condemned to repeat it ##//
 void solve()
 {
     int a=0,b=0,i=0,j=0,m=0,n=0,k=0,ans=0,cnt=0,odd=0,even=0,sum=0,l=0,r=0,p=0,q=0;
     n = in;
     vi v(n);
-    int mn = INT_MAX;
+    k = INF;
+    set<int> st;
     fo(i,n)
     {
         v[i] = in;
-        mn = min(mn,v[i]);
-    }
+        st.insert(v[i]);
+    }   
 
-    
-    Fo(i,0,n)
+    l = 0, r = n-1;
+    int mn = *st.begin();
+    while(l <= r)  
     {
-        v[i] -= mn;
-    }
 
-    vi psum(n);
-    fo(i,n)
-    {
-        if(i == 0) psum[i] = v[i];
-        else psum[i] = psum[i-1] + v[i];
-    }
-    // cout << psum;
-    // nl;
-    // if(n < 3) 
-    // {
-    //     YES;
-    //     return;
-    // }
-
-    Fo(i,0,n)
-    {
-        if((v[i] == 0 && psum[i] != 0 && psum[n-1]-psum[i] != 0) || (i != 0 && i != n-1 && v[i-1] > v[i] && v[i] < v[i+1]) )
+        if(mn == v[l])
+        {
+            l++;
+        }else if(mn == v[r])
+        {
+            r--;
+        }else if(v[l] > mn && v[r] > mn)
+        {
+            st.erase(mn);
+            mn = *st.begin();
+        }else
         {
             NO;
             return;
         }
-    }
+    }  
+
     YES;
-
-    // cout << v;
-    // nl;
-    
-    // if(v[0] && v[n-1] && n > 2) NO;
-    // else YES;
-
-    // Fo(i,1,n-1)
-    // {
-    //     if(v[i-1] > v[i] && v[i] < v[i+1])
-    //     {
-    //         NO;
-    //         return;
-    //     }
-    // }
-    // YES;
-
-    // int ii = -1;
-    // k = INT_MAX;
-    // fo(i,n)
-    // {
-    //     if(k >= v[i])
-    //     {
-    //         ii = i;
-    //         k = v[i];
-    //     }
-    // }
-    // k = INT_MAX;
-    // int jj = 0;
-    // fo(i,n)
-    // {
-    //     if(k >= v[i] && i != ii)
-    //     {
-    //         jj = i;
-    //         k = v[i];
-    //     }
-    // }
-    
-    // cout << ii << " " << jj << endl;
-
-    // if(abs(ii-jj) > 1 || (n-max(ii,jj)-1 > 0 && (min(ii,jj) > 0)))
-    // {
-    //     NO;
-    // }else
-    //     YES;
-
-
-
-
 }
+
+
 
 int32_t main()
 {
       //        Bismillah
+    //   TIMER
     // fileInput();
     // BOOST
     w(t)
     // solve();
-    // f();
 }
+
+
+/* 
+
+DFS INPUT
+
+n = in;
+m = in;
+fo(i,m)
+{
+    cin >> a >> b;
+    adj[a].push_back(b);
+    adj[b].push_back(a);
+}
+
+*/

@@ -1,0 +1,12 @@
+CREATE OR REPLACE VIEW vmlminfotreedt
+AS
+SELECT m.bizid,m.xrdin,c.bin,m.xpassword,m.xorg,c.bc,c.side,c.stno,c.binpoint,c.centerpoint,c.leftcurpoint,c.rightcurpoint,
+c.upbin,(select xrdin from mlminfo WHERE mlminfo.bizid=c.bizid and mlminfo.distrisl=c.updistrisl) as uprin,
+(select xorg from mlminfo WHERE mlminfo.bizid=c.bizid and mlminfo.distrisl=c.updistrisl) as uplinername,c.upbc,
+c.leftbin,(select xrdin from mlminfo WHERE mlminfo.bizid=c.bizid and mlminfo.distrisl=c.leftdistrisl) as leftrin,
+(select xorg from mlminfo WHERE mlminfo.bizid=c.bizid and mlminfo.distrisl=c.leftdistrisl) as leftbinname,
+(select xrdin from mlminfo WHERE mlminfo.bizid=c.bizid and mlminfo.distrisl=c.rightdistrisl) as rightrin,
+c.rightbin,(select xorg from mlminfo WHERE mlminfo.bizid=c.bizid and mlminfo.distrisl=c.rightdistrisl) as rightbinname,
+c.refbin,(select xrdin from mlminfo WHERE mlminfo.bizid=c.bizid and mlminfo.distrisl=c.refdistrisl) as refrin,
+(select xorg from mlminfo WHERE mlminfo.bizid=c.bizid and mlminfo.distrisl=c.refdistrisl) as referencename,
+m.xfname,m.xmname,m.xdob,m.xadd1,m.xmobile,m.xcity,m.xprovince,m.xpostal,m.membertype FROM mlminfo m, mlmtree c WHERE m.bizid=c.bizid and m.distrisl=c.distrisl and m.xrecflag='Live'

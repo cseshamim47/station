@@ -1,0 +1,24 @@
+cd c:\xampp\mysql\bin
+
+npm run dev
+php artisan make:migration create_listing_table 
+php artisan migrate
+php artisan migrate:fresh [deletes all tables and recreates]
+
+php artisan db:seed
+php artisan migrate:refresh
+php artisan migrate:refresh --seed
+php artisan make:model Listing
+
+php artisan make:factory ListingFactory
+@yield('name');
+
+{{asset('images/no-image.png')}}
+
+
+php artisan make:controller ListingController
+php artisan storage:link
+storage/ [images are saved here]
+
+enctype="multipart/form-data" [for file input. put inside <form> tag]
+@csrf

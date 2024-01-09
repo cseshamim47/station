@@ -1,0 +1,10 @@
+
+
+Annotations ->  
+    1. annotations are kind of metadata
+    2. all annotations start with the @ symbol. eg: @SuppressWarning("unused")
+Generics ->
+The Collection Framework ->
+Lambda Expression ->
+Method Referencing ->
+Stream API ->

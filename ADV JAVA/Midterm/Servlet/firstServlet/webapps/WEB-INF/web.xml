@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         version="2.5"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+<!--    <servlet>-->
+<!--        <servlet-name>1</servlet-name>-->
+<!--        <servlet-class>FirstServlet</servlet-class>-->
+
+<!--        <init-param>-->
+<!--            <param-name>name</param-name>-->
+<!--            <param-value>Ahmed</param-value>-->
+<!--        </init-param>-->
+<!--    </servlet>-->
+
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>1</servlet-name>-->
+<!--        <url-pattern>/add</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+
+<!--    <servlet>-->
+<!--        <servlet-name>2</servlet-name>-->
+<!--        <servlet-class>SecondServlet</servlet-class>-->
+<!--    </servlet>-->
+
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>2</servlet-name>-->
+<!--        <url-pattern>/sq</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+<!--    <context-param>-->
+<!--        <param-name>name</param-name>-->
+<!--        <param-value>shamim</param-value>-->
+<!--    </context-param>-->
+
+<!--    <context-param>-->
+<!--        <param-name>phone</param-name>-->
+<!--        <param-value>Apple</param-value>-->
+<!--    </context-param>-->
+
+
+</web-app>

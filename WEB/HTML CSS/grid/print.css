@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+}
+
+.bill-canvas {
+    margin: 50px 100px; 
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    min-width: 900px;
+
+    display: grid;
+    grid-template-areas:
+        'header header'
+        'one sidebar'
+        'two sidebar'
+        'three sidebar'
+        'four sidebar'
+        'five sidebar'
+        'six sidebar';
+    grid-template-columns: 2.5fr 1fr;
+
+    /* grid-template-rows: 70px 50px 140px 30px 190px 30px 80px; */
+}
+
+.header,
+.sidebar,
+.one,
+.two,
+.three,
+.four,
+.five,
+.six {
+    /* background-color: steelblue; */
+    color: rgb(8, 108, 151);
+    padding: 5px 0 0 5px;
+    border-bottom: rgb(29, 142, 190) 2px solid;
+    border-left: rgb(29, 142, 190) 2px solid;
+}
+.sidebar,.header{
+    border-right: rgb(29, 142, 190) 2px solid;
+}
+.header{
+    border-top: rgb(29, 142, 190) 2px solid;
+    display: flex;
+}
+
+.header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+}
+
+.four {
+    grid-area: four;
+}
+
+.five {
+    grid-area: five;
+}
+
+.six {
+    grid-area: six;
+}
+
+@media print {
+    button{
+        display: none;
+    }
+
+    .bill-canvas {
+        margin: 0;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 12px;
+    }
+    
+}

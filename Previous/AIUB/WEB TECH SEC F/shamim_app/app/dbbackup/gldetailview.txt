@@ -1,0 +1,40 @@
+create or replace view gldetailview
+As
+select h.ztime,h.bizid,h.xvoucher,d.xrow,h.xdate,h.xnarration,h.xref,h.xchequeno,h.xyear,h.xper,h.zemail,h.xemail,h.xbranch,h.xdoctype,
+h.xdocnum,h.xapprovedby, h.xmanager, d.xacc, (select xdesc from glchart g where d.bizid = g.bizid and d.xacc = g.xacc) as xaccdesc,
+d.xacctype,d.xaccusage,d.xaccsource,d.xaccsub,(select xdesc from glchartsub s where d.bizid = s.bizid and d.xacc = s.xacc and d.xaccsub = s.xaccsub) as xaccsubdesc,
+d.xproj,d.xsec,d.xdiv,xcur,d.xbase,d.xbase*d.xexch as xprime,d.xcheque,d.xchequedate,
+d.xinvnum,d.xsalesparson,h.xrecflag,
+(select xacclevel1 from glchart g where d.bizid = g.bizid and d.xacc = g.xacc) as xacclevel1,
+(select xacclevel2 from glchart g where d.bizid = g.bizid and d.xacc = g.xacc) as xacclevel2,
+(select xacclevel3 from glchart g where d.bizid = g.bizid and d.xacc = g.xacc) as xacclevel3
+ from glheader h, gldetail d where h.bizid = d.bizid and h.xvoucher = d.xvoucher;
+
+
+
+
+/////Modified
+
+
+
+create or replace view gldetailview
+As
+select h.ztime,h.bizid,h.xvoucher,d.xrow,h.xdate,h.xnarration,h.xref,h.xchequeno,h.xyear,h.xper,h.zemail,h.xemail,h.xbranch,h.xdoctype,
+h.xdocnum,h.xapprovedby, h.xmanager, d.xacc, (select xdesc from glchart g where d.bizid = g.bizid and d.xacc = g.xacc) as xaccdesc,
+d.xacctype,d.xaccusage,d.xaccsource,d.xaccsub,
+(CASE
+   WHEN (d.xaccsource='Sub Account') THEN 
+(select xdesc from glchartsub s where d.bizid = s.bizid and d.xacc = s.xacc and d.xaccsub = s.xaccsub)  
+WHEN (d.xaccsource='Customer') THEN 
+(select xorg from secus c where d.bizid = c.bizid and d.xaccsub = c.xcus)  
+WHEN (d.xaccsource='Supplier') THEN 
+(select xorg from sesup s where d.bizid = s.bizid and d.xaccsub = s.xsup) 
+ELSE 
+'' 
+END) as xaccsubdesc ,
+d.xproj,d.xsec,d.xdiv,xcur,d.xbase,d.xbase*d.xexch as xprime,d.xcheque,d.xchequedate,d.xflag,
+d.xinvnum,d.xsalesparson,h.xrecflag,
+(select xacclevel1 from glchart g where d.bizid = g.bizid and d.xacc = g.xacc) as xacclevel1,
+(select xacclevel2 from glchart g where d.bizid = g.bizid and d.xacc = g.xacc) as xacclevel2,
+(select xacclevel3 from glchart g where d.bizid = g.bizid and d.xacc = g.xacc) as xacclevel3
+ from glheader h, gldetail d where h.bizid = d.bizid and h.xvoucher = d.xvoucher;

@@ -1,0 +1,1 @@
+INSERT INTO billmst (`zemail`,`bizid`,`xtxnnum`,`xdate`,`xsup`,`xmobile`,`xproject`,`xstatus`) values(('falgunimahmud@nnsel.com',100,'BILL-00871','2020-08-12','test bill','01643685585','NNSEL OFFICE','Created'))

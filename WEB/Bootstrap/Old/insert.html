@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <style>
+      .nav-item-gap{
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body class="">
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
+      <div class="container-xl">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <a class="navbar-brand bg-light" href="#">
+            <img src="jamalpur-logo.png" alt="Jamalpur Pourashava Logo" width="60">
+          </a>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item nav-item-gap">
+              <a class="nav-link active" aria-current="page" href="#">Insert</a>
+            </li>
+            <li class="nav-item nav-item-gap">
+              <a class="nav-link" href="#">Edit</a>
+            </li>
+            <li class="nav-item nav-item-gap">
+              <a class="nav-link" href="#">Delete</a>
+            </li>
+            <li class="nav-item nav-item-gap">
+              <a class="nav-link" href="#">Approval</a>
+            </li>
+            <li class="nav-item nav-item-gap">
+              <a class="nav-link" href="#">Blocklist</a>
+            </li>
+            <li class="nav-item nav-item-gap">
+              <a class="nav-link" href="#">Print</a>
+            </li>
+          </ul>
+          <ul  class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-xl">
+      <p class="h3 mt-3 mb-4 text-center bg-light p-2">New Consumer Information</p>
+       <!-- form insertion  -->
+        <form class="row g-3 needs-validation" novalidate>
+          <div class="col-md-3">
+            <label for="codeNum" class="form-label">Code Number</label>
+            <input type="number" class="form-control" id="codeNum" required>
+          </div>
+          <div class="col-md-3">
+            <label for="accNum" class="form-label">Account Number</label>
+            <input type="text" class="form-control" id="accNum" required>
+          </div>
+          <div class="col-md-3">
+            <label for="category" class="form-label">Category</label>
+            <input type="text" class="form-control" id="category" required>
+          </div>
+          <div class="col-md-3">
+            <label for="avGconsumption" class="form-label">Average Consumption</label>
+            <input type="number" class="form-control" id="avGconsumption" required>
+          </div>
+          <div class="col-md-3">
+            <label for="waterStatus" class="form-label">Name</label>
+            <input type="text" class="form-control" id="waterStatus" required>
+          </div>
+          <div class="col-md-3">
+            <label for="accType" class="form-label">Account Type</label>
+            <select name="accType" class="form-select form-select-md" aria-label="">
+              <option value="general" selected>General</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label for="waterStatus" class="form-label">Water Status</label>
+            <select name="waterStatus" class="form-select form-select-md" aria-label="">
+              <option value="metered" selected>Metered</option>
+              <option value="unmetered">Un-metered</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label for="waterStatus" class="form-label">Sewer Status</label>
+            <select name="sewerStatus" class="form-select form-select-md" aria-label="">
+              <option value="metered" selected>Connected</option>
+            </select>
+          </div>
+          <div class="col-6">
+            <label for="address" class="form-label">Address</label>
+            <input type="text" class="form-control" id="address"  placeholder="Apartment, studio, or floor" required>
+          </div>
+          <div class="col-md-3">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="number" class="form-control" id="phone">
+          </div>
+          <div class="col-md-3">
+            <label for="cell" class="form-label">Cell</label>
+            <input type="number" class="form-control" id="cell" required>
+          </div>
+          <div class="col-md-3">
+            <label for="categoryPercent" class="form-label">Category(%)</label>
+            <input type="text" class="form-control" id="categoryPercent" required>
+          </div>
+          <div class="col-md-3">
+            <label for="tariff" class="form-label">Tariff(Tk.)</label>
+            <input type="number" class="form-control" id="tariff" required>
+          </div>
+          <div class="col-md-3">
+            <label for="presentDate" class="form-label">Present Date</label>
+            <input type="text" class="form-control" id="presentDate" required>
+          </div>
+          <div class="col-md-3">
+            <label for="presentDateReading" class="form-label">Present Date Reading</label>
+            <input type="number" class="form-control" id="presentDateReading" required>
+          </div>
+          <div class="col-md-3">
+            <label for="previousDate" class="form-label">Previous Date</label>
+            <input type="text" class="form-control" id="previousDate" required>
+          </div>
+          <div class="col-md-3">
+            <label for="previousDateReading" class="form-label">Previous Date Reading</label>
+            <input type="number" class="form-control" id="previousDateReading" required>
+          </div>
+          <div class="col-md-3">
+            <label for="consumption" class="form-label">Consumption</label>
+            <input type="number" class="form-control" id="consumption" required>
+          </div>
+          <div class="col-md-3">
+            <label for="particulars" class="form-label">Particulars</label>
+            <input type="text" class="form-control" id="particulars" required>
+          </div>
+
+          <div class="col-md-3">
+            <label for="water" class="form-label">Water</label>
+            <input type="number" class="form-control" id="water" required>
+          </div>
+          <div class="col-md-3">
+            <label for="Sewer" class="form-label">Sewer</label>
+            <input type="number" class="form-control" id="Sewer" required>
+          </div>
+          <div class="col-md-3">
+            <label for="StormWater" class="form-label">Storm Water</label>
+            <input type="number" class="form-control" id="StormWater" required>
+          </div>
+          <div class="col-md-3">
+            <label for="Waiver" class="form-label">Waiver</label>
+            <input type="number" class="form-control" id="Waiver" required>
+          </div>
+          <div class="col-md-3">
+            <label for="adjustment" class="form-label">Adjustment</label>
+            <input type="number" class="form-control" id="adjustment" placeholder="Surcharge & Others" required>
+          </div>
+          <div class="col-md-3">
+            <label for="" class="form-label">Bill Prepared By</label>
+            <input type="text" class="form-control" id="" placeholder="Without Surcharge" required>
+          </div>
+          <div class="col-md-3">
+            <label for="" class="form-label">Last Payment Date</label>
+            <input type="text" class="form-control" id="" placeholder="Without Surcharge" required>
+          </div>
+          <div class="col-md-3">
+            <label for="" class="form-label">Last Payment Amount</label>
+            <input type="number" class="form-control" id="" placeholder="Without Surcharge" required>
+          </div>
+          <div class="col-md-3">
+            <label for="" class="form-label">Ann. Valuation</label>
+            <input type="number" class="form-control" id="" placeholder="Date" required>
+          </div>
+          <div class="col-md-3">
+            <label for="" class="form-label">Diameter(MM)</label>
+            <input type="number" class="form-control" id="" placeholder="Amount" required>
+          </div>
+
+          <div class="col-md-3">
+            <label for="" class="form-label">Meter No.</label>
+            <input type="number" class="form-control" id="" placeholder="Amount" required>
+          </div>
+
+          <div class="col-md-3">
+            <label for="" class="form-label">Insatll Date</label>
+            <input type="date" class="form-control" id="" placeholder="Amount" required>
+          </div>
+
+          <div class="col-md-3">
+            <label for="" class="form-label">House Type</label>
+            <select name="waterStatus" class="form-select form-select-md" aria-label="">
+              <option value="metered" selected>Building</option>
+              <option value="unmetered">Office</option>
+            </select>
+          </div>
+
+          <div class="col-md-3">
+            <label for="" class="form-label">Land(Dec)</label>
+            <input type="number" class="form-control" id="" placeholder="Amount" required>
+          </div>
+
+          <div class="col-md-3">
+            <label for="" class="form-label">Storied</label>
+            <input type="number" class="form-control" id="" placeholder="Amount" required>
+          </div>
+
+          <div class="col-md-3">
+            <label for="" class="form-label">Flat</label>
+            <input type="number" class="form-control" id="" placeholder="Amount" required>
+          </div>
+          
+          <div class="col-12">
+            <button type="submit" class="btn btn-dark mb-4">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+      
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script>
+      (() => {
+      'use strict'
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      const forms = document.querySelectorAll('.needs-validation')
+
+      // Loop over them and prevent submission
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
+    </script>
+  </body>
+</html>
+
+
+<!-- <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+<a class="nav-link" href="#">Insert</a>
+<a class="nav-link" href="#">Edit</a>
+<a class="nav-link" href="#">Delete</a>
+<a class="nav-link" href="#">Approve</a>
+<a class="nav-link" href="#">Blocklist</a>
+<a class="nav-link" href="#">Print</a> -->

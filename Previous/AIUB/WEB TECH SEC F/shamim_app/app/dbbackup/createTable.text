@@ -1,0 +1,46 @@
+CREATE TABLE IF NOT EXISTS `imchkq` (
+  `imchkqsl` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `ztime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `zutime` datetime DEFAULT NULL,
+  `bizid` int(11) NOT NULL,
+  `zemail` varchar(100) NOT NULL,
+  `xemail` varchar(100) DEFAULT NULL,
+  `ximchkqnum` varchar(20) NOT NULL,
+  `ximchksenum` varchar(20) DEFAULT NULL,
+  `xdate` date NOT NULL,
+  `xsup` varchar(20) DEFAULT NULL,
+  `xnote` varchar(500) DEFAULT NULL,
+  `xdocnum` varchar(100) DEFAULT NULL,
+  `xstr` varchar(100) DEFAULT NULL,
+  `xflagimchkq` varchar(10) NOT NULL DEFAULT 'Created',
+  `xrecflag` varchar(10) NOT NULL DEFAULT 'Live',
+  `xbranch` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`bizid`,`ximchkqnum`),
+  UNIQUE KEY `imchkqsl` (`imchkqsl`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=147 ;
+
+
+CREATE TABLE IF NOT EXISTS `imchkqdt` (
+  `ztime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `zutime` datetime DEFAULT NULL,
+  `bizid` int(11) NOT NULL,
+  `zemail` varchar(100) NOT NULL,
+  `xemail` varchar(100) DEFAULT NULL,
+  `ximchkqnum` varchar(20) NOT NULL,
+  `xrow` int(5) NOT NULL,
+  `xitemcode` varchar(20) NOT NULL,
+  `xqtyqchecked` double(18,6) NOT NULL,
+  `xqtyqpassed` double(18,6) NOT NULL,
+  `xunit` varchar(50) DEFAULT NULL,
+  `xnote` varchar(160) DEFAULT NULL,
+  `xstr1` int(11) DEFAULT NULL,
+  `xstr2` int(11) DEFAULT NULL,
+  `xstr3` int(11) DEFAULT NULL,
+  `xnum1` int(11) DEFAULT NULL,
+  `xnum2` int(11) DEFAULT NULL,
+  `xnum3` int(11) DEFAULT NULL,
+  `xdate` date DEFAULT NULL,
+  PRIMARY KEY (`bizid`,`ximchkqnum`,`xrow`),
+  KEY `index_imchkqdt_xitemcode` (`xitemcode`),
+  KEY `FK_imchkq_xitemcode` (`bizid`,`xitemcode`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;

@@ -1,0 +1,35 @@
+Contact List Management
+Email Campaign Creation
+Campaign Performance Analytics
+Lead Management
+Lead Status Tracking
+Customizable Lead Fields
+Contact History Tracking
+Report Generation
+Contact Filtering
+Lead Assignment
+Email Templates
+Lead Scoring
+User Authentication
+Role-Based Access Control
+Lead Conversion Tracking
+Email Open Rate Monitoring
+Click-Through Rate Analytics
+Lead Activity Logs
+Custom Dashboards
+Data Import/Export
+Real-time Notifications
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Elephent</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                font-family:Arial, Helvetica, sans-serif;
+                background-color: #becee7;
+            }
+            /* @media (min-width: 500px) and (orientation: landscape)
+            {
+                body{
+                    background-color: #e27497;
+                }
+            } */
+            /* @media (min-width: 600px) and (max-width: 700px){
+                body{
+                    background-color: #c1e0c8;
+                }
+            } */
+            .container{
+                width: 70%;
+                max-width: 980px;
+                margin: 0 auto;
+                /* border: 2px solid saddlebrown; */
+                text-align: justify;
+            }
+            h1{
+                text-align: center;
+            }
+            img{
+                width: 100%;
+            }
+            h1 span{
+                color: #B7832F;   
+            }
+            .columns{
+                display: flex;
+                margin: 1em 0;
+                justify-content:space-between;
+                /* align-items: flex-start; */
+            }
+            h2{
+                font-size: 1.2rem;
+                color: #707070;
+            }
+            .col-bg{
+                background-color: #312614;
+                padding: .7em;
+                color: white;
+            }
+            .col-1{
+                width: 24%;
+            }
+            .col-2{
+                width: 40%;
+            }
+            .col-3{
+                width: 70%;
+            }
+            @media (max-width: 550px)
+            {
+                .columns{
+                    flex-direction: column;
+                }
+                .col-1,
+                .col-2,
+                .col-3{
+                    width: 100%;
+                }
+                .container{
+                    width: 90%;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 align="center">Let's start <span> getting a little </span> more fancy!</h1>
+            <img src="elephent.jpg" alt="">
+            <div class="columns">
+                <div class="col col-1">
+                    <h2>dolor sit</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ab voluptatem fugiat saepe commodi quia corporis, amet quibusdam facilis dignissimos in at dicta eius eos officiis accusantium asperiores quaerat tenetur ptatem fugiat saepe commodi quia corporis, amet quibusda</p>
+                </div>
+                <div class="col col-2">
+                    <h2>consectetur adipisicing</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam fugiat adipisci beatae commodi a, cupiditate quis inventore repudiandae cum laborum quibusdam ea recusandae dignissimos? Molestiae excepturi necessitatibus non consectetur tempore.</p>
+                    <p>Sequi maiores nulla corrupti, labore tempora eveniet vero alias perspiciatis veniam earum modi voluptates laborum voluptate fugiat. Nisi.</p>
+                </div>
+                <div class="col col-1 col-bg">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et rem fugit inventore te provam cumque expedita quos accusamus quisquam autem earum. Nescue expedita qusos aaccusamus officiis quia exercitationem nulla obcaecati vel consequuntur iusto esse quam minima eaque dolor porro ea culpa? Nostrum laudantium doloremque quaerat illum? Sint?</p>
+                </div>
+            </div>
+            
+            <div class="columns">
+                <div class="col col-3">
+                    <h2>Nostrum laudantium doloremque quaerat</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis error placeat iste tenetur esse, nisi sapiente eveniet voluptate in illo nam sunt cumque doloremque sit provident, nostrum illum ducimus soluta. Sit corporis, necessitatibus vitae veniam culpa nemo asperiores. Quasi, laudantium fugit. Eveniet laborum assumenda ipsam minus suscipit odit voluptatum ab. Quo exercitationem blanditiis tempore, reiciendis ipsam facilis optio mollitia voluptate consequatur quia. Fuga eligendi, recusandae atque blanditiis cum magnam ab!</p>
+                </div>
+                <div class="col col-1 col-bg">
+                    <p>Inventore saepe vitae facilis natus pariatur obcaecati odit eveniet ducimus voluptas reprehenderit quas sunt quisquam, dolore quidem reiciendis autur, voluptatum expedita assumenda? Architecto ratione impedit neque, officiis</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+@media print {
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .page {
+        page-break-after:always;
+        height: 100%;
+    }
+
+    h1 {
+        page-break-after: avoid;
+    }
+}

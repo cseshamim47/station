@@ -1,0 +1,9 @@
+alter table mlmtree AUTO_INCREMENT=777
+
+
+insert into `mlmtree` (bizid,distrisl,side,bc,xuser) values(100,4,'Right',1,'rajib@pureapp.com')
+
+
+insert into mlmtreegen (bizid,bin,upbin) values(100,?,?)
+
+insert into mlmtreeref (bizid,bin,refbin) values(100,?,?)
