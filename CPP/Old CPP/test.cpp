@@ -134,53 +134,13 @@ int dx[] = {-1, 1, 0, 0,-1,-1, 1,1};
 int dy[] = { 0, 0,-1, 1,-1, 1,-1,1};
 
 
-//## Those who cannot remember the past are condemned to repeat it ##//
+//## Save Palestine ##//
 void solve()
 {
     int a=0,b=0,i=0,j=0,m=0,n=0,k=0,ans=0,cnt=0,odd=0,even=0,sum=0,l=0,r=0,p=0,q=0;
-    
-    string str,pat;
-    cin >> str >> pat;
-
-    map<char,int> mp;
-    fo(i,s(str))
-    {
-        mp[str[i]]++;
-    }
-
-    fo(i,s(pat))
-    {
-        mp[pat[i]]--;
-    }
-
-    string out1="";
-    string out2="";
-    for(auto x : mp)
-    {
-        string tmp = "";
-        k = x.S;
-        while(k--)
-        {
-            tmp.pb(x.F);
-        }
-        out1 += tmp;
-        if(x.F == pat[0])
-        {
-            out1 += pat;
-        }
-
-        if(x.F == pat[0])
-        {
-            out2 += pat;
-        }
-        out2 += tmp;
-        
-
-    }
-
-    if(out1 < out2) cout << out1 << endl;
-    else cout << out2 << endl;
-
+    cin >> n;
+    if(n > 98) cout << "YES" << endl;
+    else cout << "NO" << endl;
     
 }
 

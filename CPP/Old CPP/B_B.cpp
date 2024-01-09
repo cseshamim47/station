@@ -134,26 +134,55 @@ int dx[] = {-1, 1, 0, 0,-1,-1, 1,1};
 int dy[] = { 0, 0,-1, 1,-1, 1,-1,1};
 
 
-//## Those who cannot remember the past are condemned to repeat it ##//
+//## Save Palestine ##//
 void solve()
 {
     int a=0,b=0,i=0,j=0,m=0,n=0,k=0,ans=0,cnt=0,odd=0,even=0,sum=0,l=0,r=0,p=0,q=0;
-    n = in;
-    k = in;
-    vi v(n);
+    cin >> n;
+    string str;
+    cin >> str;
+
+    int x= 0;
+    int X = 0;
     fo(i,n)
     {
-        v[i] = in;
+        if(str[i] == 'X') X++;
+        else x++;
     }
-    ans = INF;
+    if(x == X)
+    {
+        cout << 0 << endl;
+        cout << str << endl;
+        return;
+    }
+    
+    int gap = abs(x-X)/2;
+    cout << gap << endl;
     fo(i,n)
     {
-        if(k%v[i] == 0)
+        if(gap == 0) 
         {
-            ans = min(ans,k/v[i]);
+            cout << str[i];
+            continue;
+        }
+
+        if(X > x)
+        {
+            if(str[i] == 'X')
+            {
+                cout << 'x';
+                gap--;
+            }else cout << 'x';
+        }else 
+        {
+            if(str[i] == 'x')
+            {
+                cout << 'X';
+                gap--;
+            }else cout << 'X';
         }
     }
-    cout << ans << endl;
+    
     
 }
 

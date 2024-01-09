@@ -134,45 +134,34 @@ int dx[] = {-1, 1, 0, 0,-1,-1, 1,1};
 int dy[] = { 0, 0,-1, 1,-1, 1,-1,1};
 
 
-//## Free Palestine //
+//## Save Palestine ##//
 void solve()
 {
     int a=0,b=0,i=0,j=0,m=0,n=0,k=0,ans=0,cnt=0,odd=0,even=0,sum=0,l=0,r=0,p=0,q=0;
-    
-    n = in;
-    vi v(n);
-    even = odd = 0;
+    string str;
+    cin >> str;
+    n = s(str);
+    ans = -1;
     fo(i,n)
     {
-        v[i] = in;
-        if(i%2 == 0) even += v[i];
-        else odd += v[i];
-    }
-    int e,o;
-    e = o = 0;
-    e = 0;
-    // deb2(even,odd);
-    fo(i,n)
-    {
-        int newEven = e + odd-o;
-        int newOdd = o + even-e;
-
-
-        if(i%2 == 0)
+        if(str[i] != str[0])
         {
-            if(newEven == newOdd-v[i]) ans++;
-            e += v[i];
-        }else 
-        {
-            if(newEven-v[i] == newOdd) ans++;
-            o += v[i];
-        }
-    
+            if(str[i] != str[n-1])
+            {
+                cnt++;
+            }else 
+            {
+                cnt = 0;
+            }
+        }else cnt = 0;
+        if(cnt != 0)
+        ans = max(ans,cnt);
     }
 
     cout << ans << endl;
-
-
+    
+    
+    
     
 }
 
@@ -184,8 +173,8 @@ int32_t main()
     //   TIMER
     // fileInput();
     // BOOST
-    // w(t)
-    solve();
+    w(t)
+    // solve();
 }
 
 
