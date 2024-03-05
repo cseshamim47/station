@@ -1,7 +1,3 @@
-// In the name of ALLAH
-// cseshamim47
-// 05-02-2023 07:03:06
-
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
 using namespace std;
@@ -37,11 +33,28 @@ using namespace __gnu_pbds;
 #define piis [](auto &a, auto &b){return a.S < b.S;}
 #define piig [](auto &a, auto &b){return a.S > b.S;}
 #define bitOne(x) __builtin_popcount(x)
+#define read freopen("input.txt","r",stdin)
+#define write freopen("output.txt","w",stdout)
 template<typename T> istream& operator>>(istream& in, vector<T>& a) {for(auto &x : a) in >> x; return in;};
 template<typename T> ostream& operator<<(ostream& out, vector<T>& a) {for(auto &x : a) out << x << ' ';nl; return out;};
 template<typename T1, typename T2> ostream& operator<<(ostream& out, const pair<T1, T2>& x) {return out << x.F << ' ' << x.S  << endl;}
 template<typename T1, typename T2> istream& operator>>(istream& in, pair<T1, T2>& x) {return in >> x.F >> x.S;}
 template<typename T> void Unique(T &a) {a.erase(unique(a.begin(), a.end()), a.end());}
+
+const int MOD=1000000007;
+inline void normal(int &a) { a %= MOD; (a < 0) && (a += MOD); }
+
+inline int modMul(int a, int b) { a %= MOD, b %= MOD; normal(a), normal(b); return (a*b)%MOD; }
+
+inline int modAdd(int a, int b) { a %= MOD, b %= MOD; normal(a), normal(b); return (a+b)%MOD; }
+
+inline int modSub(int a, int b) { a %= MOD, b %= MOD; normal(a), normal(b); a -= b; normal(a); return a; }
+
+inline int modPow(int b, int p) { int r = 1; while(p) { if(p&1) r = modMul(r, b); b = modMul(b, b); p >>= 1; } return r; }
+
+inline int modInverse(int a) { return modPow(a, MOD-2); }
+
+inline int modDiv(int a, int b) { return modMul(a, modInverse(b)); }
 
 
 // ********** Input ********** //
@@ -141,6 +154,27 @@ bool dfsCycle(int vertex,int parent) /// have cycle = true, else = false
 int dx[] = {-1, 1, 0, 0,-1,-1, 1,1};
 int dy[] = { 0, 0,-1, 1,-1, 1,-1,1};
 
+/// precalculate factorial 
+int fact[N];
+void preFact()
+{
+    fact[0] = 1;
+    for(int i = 1; i < N; i++)
+    {
+        fact[i] = (1LL*fact[i-1]*i)%mod;
+        if(fact[i] < 0) fact[i] += mod;
+    }
+}
+
+// ncr mod
+int ncr(int n,int r)
+{
+    int denom = (fact[n-r] * fact[r] * 1LL)%mod; 
+    int res = (1LL * fact[n] * inverse(denom))%mod;
+    if(res < 0) res += mod;
+    return res%mod;
+}
+
 
 //## Those who cannot remember the past are condemned to repeat it ##//
 void solve()
@@ -149,6 +183,8 @@ void solve()
     
     
 }
+
+
 
 
 
@@ -202,3 +238,23 @@ int big_mod(int base, int power, int mod)
 }
 
 */
+
+
+
+/* 
+##### Techniques #####
+1. Contribution Technique
+2. Binary Search on ans
+3. Binary Search on other thing
+4. Ternary Search 
+5. Number Theory
+6. DP
+7. Segment Tree
+8. PBDS
+9. Set/map
+10. Sieve or Backward Sieve
+
+
+*/
+
+
