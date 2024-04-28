@@ -1,0 +1,12 @@
+sum of squrare of odd/even numbers
+
+trie
+
+digit dp
+
+math
+
+sum of numbers that are co-prime
+
+sparse table
+
